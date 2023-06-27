@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BB1343D2A4B85CC0048A310 /* DailyGamificationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1343C2A4B85CC0048A310 /* DailyGamificationApp.swift */; };
+		3BB1343F2A4B85CC0048A310 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1343E2A4B85CC0048A310 /* ContentView.swift */; };
+		3BB134412A4B85CD0048A310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BB134402A4B85CD0048A310 /* Assets.xcassets */; };
+		3BB134442A4B85CD0048A310 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BB134432A4B85CD0048A310 /* Preview Assets.xcassets */; };
+		3BB1344E2A4B85CD0048A310 /* DailyGamificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1344D2A4B85CD0048A310 /* DailyGamificationTests.swift */; };
+		3BB134582A4B85CD0048A310 /* DailyGamificationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB134572A4B85CD0048A310 /* DailyGamificationUITests.swift */; };
+		3BB1345A2A4B85CD0048A310 /* DailyGamificationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB134592A4B85CD0048A310 /* DailyGamificationUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3BB1344A2A4B85CD0048A310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BB134312A4B85CC0048A310 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BB134382A4B85CC0048A310;
+			remoteInfo = DailyGamification;
+		};
+		3BB134542A4B85CD0048A310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BB134312A4B85CC0048A310 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BB134382A4B85CC0048A310;
+			remoteInfo = DailyGamification;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3BB134392A4B85CC0048A310 /* DailyGamification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyGamification.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BB1343C2A4B85CC0048A310 /* DailyGamificationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGamificationApp.swift; sourceTree = "<group>"; };
+		3BB1343E2A4B85CC0048A310 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3BB134402A4B85CD0048A310 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BB134432A4B85CD0048A310 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3BB134492A4B85CD0048A310 /* DailyGamificationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyGamificationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BB1344D2A4B85CD0048A310 /* DailyGamificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGamificationTests.swift; sourceTree = "<group>"; };
+		3BB134532A4B85CD0048A310 /* DailyGamificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyGamificationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BB134572A4B85CD0048A310 /* DailyGamificationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGamificationUITests.swift; sourceTree = "<group>"; };
+		3BB134592A4B85CD0048A310 /* DailyGamificationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGamificationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BB134362A4B85CC0048A310 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BB134462A4B85CD0048A310 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BB134502A4B85CD0048A310 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BB134302A4B85CC0048A310 = {
+			isa = PBXGroup;
+			children = (
+				3BB1343B2A4B85CC0048A310 /* DailyGamification */,
+				3BB1344C2A4B85CD0048A310 /* DailyGamificationTests */,
+				3BB134562A4B85CD0048A310 /* DailyGamificationUITests */,
+				3BB1343A2A4B85CC0048A310 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3BB1343A2A4B85CC0048A310 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BB134392A4B85CC0048A310 /* DailyGamification.app */,
+				3BB134492A4B85CD0048A310 /* DailyGamificationTests.xctest */,
+				3BB134532A4B85CD0048A310 /* DailyGamificationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BB1343B2A4B85CC0048A310 /* DailyGamification */ = {
+			isa = PBXGroup;
+			children = (
+				3BB1343C2A4B85CC0048A310 /* DailyGamificationApp.swift */,
+				3BB1343E2A4B85CC0048A310 /* ContentView.swift */,
+				3BB134402A4B85CD0048A310 /* Assets.xcassets */,
+				3BB134422A4B85CD0048A310 /* Preview Content */,
+			);
+			path = DailyGamification;
+			sourceTree = "<group>";
+		};
+		3BB134422A4B85CD0048A310 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3BB134432A4B85CD0048A310 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3BB1344C2A4B85CD0048A310 /* DailyGamificationTests */ = {
+			isa = PBXGroup;
+			children = (
+				3BB1344D2A4B85CD0048A310 /* DailyGamificationTests.swift */,
+			);
+			path = DailyGamificationTests;
+			sourceTree = "<group>";
+		};
+		3BB134562A4B85CD0048A310 /* DailyGamificationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3BB134572A4B85CD0048A310 /* DailyGamificationUITests.swift */,
+				3BB134592A4B85CD0048A310 /* DailyGamificationUITestsLaunchTests.swift */,
+			);
+			path = DailyGamificationUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BB134382A4B85CC0048A310 /* DailyGamification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BB1345D2A4B85CD0048A310 /* Build configuration list for PBXNativeTarget "DailyGamification" */;
+			buildPhases = (
+				3BB134352A4B85CC0048A310 /* Sources */,
+				3BB134362A4B85CC0048A310 /* Frameworks */,
+				3BB134372A4B85CC0048A310 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DailyGamification;
+			productName = DailyGamification;
+			productReference = 3BB134392A4B85CC0048A310 /* DailyGamification.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3BB134482A4B85CD0048A310 /* DailyGamificationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BB134602A4B85CD0048A310 /* Build configuration list for PBXNativeTarget "DailyGamificationTests" */;
+			buildPhases = (
+				3BB134452A4B85CD0048A310 /* Sources */,
+				3BB134462A4B85CD0048A310 /* Frameworks */,
+				3BB134472A4B85CD0048A310 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BB1344B2A4B85CD0048A310 /* PBXTargetDependency */,
+			);
+			name = DailyGamificationTests;
+			productName = DailyGamificationTests;
+			productReference = 3BB134492A4B85CD0048A310 /* DailyGamificationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3BB134522A4B85CD0048A310 /* DailyGamificationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BB134632A4B85CD0048A310 /* Build configuration list for PBXNativeTarget "DailyGamificationUITests" */;
+			buildPhases = (
+				3BB1344F2A4B85CD0048A310 /* Sources */,
+				3BB134502A4B85CD0048A310 /* Frameworks */,
+				3BB134512A4B85CD0048A310 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BB134552A4B85CD0048A310 /* PBXTargetDependency */,
+			);
+			name = DailyGamificationUITests;
+			productName = DailyGamificationUITests;
+			productReference = 3BB134532A4B85CD0048A310 /* DailyGamificationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BB134312A4B85CC0048A310 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3BB134382A4B85CC0048A310 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					3BB134482A4B85CD0048A310 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 3BB134382A4B85CC0048A310;
+					};
+					3BB134522A4B85CD0048A310 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 3BB134382A4B85CC0048A310;
+					};
+				};
+			};
+			buildConfigurationList = 3BB134342A4B85CC0048A310 /* Build configuration list for PBXProject "DailyGamification" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BB134302A4B85CC0048A310;
+			productRefGroup = 3BB1343A2A4B85CC0048A310 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BB134382A4B85CC0048A310 /* DailyGamification */,
+				3BB134482A4B85CD0048A310 /* DailyGamificationTests */,
+				3BB134522A4B85CD0048A310 /* DailyGamificationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BB134372A4B85CC0048A310 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB134442A4B85CD0048A310 /* Preview Assets.xcassets in Resources */,
+				3BB134412A4B85CD0048A310 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BB134472A4B85CD0048A310 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BB134512A4B85CD0048A310 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BB134352A4B85CC0048A310 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB1343F2A4B85CC0048A310 /* ContentView.swift in Sources */,
+				3BB1343D2A4B85CC0048A310 /* DailyGamificationApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BB134452A4B85CD0048A310 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB1344E2A4B85CD0048A310 /* DailyGamificationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BB1344F2A4B85CD0048A310 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB134582A4B85CD0048A310 /* DailyGamificationUITests.swift in Sources */,
+				3BB1345A2A4B85CD0048A310 /* DailyGamificationUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3BB1344B2A4B85CD0048A310 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BB134382A4B85CC0048A310 /* DailyGamification */;
+			targetProxy = 3BB1344A2A4B85CD0048A310 /* PBXContainerItemProxy */;
+		};
+		3BB134552A4B85CD0048A310 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BB134382A4B85CC0048A310 /* DailyGamification */;
+			targetProxy = 3BB134542A4B85CD0048A310 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3BB1345B2A4B85CD0048A310 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3BB1345C2A4B85CD0048A310 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BB1345E2A4B85CD0048A310 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DailyGamification/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdsoft.DailyGamification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BB1345F2A4B85CD0048A310 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DailyGamification/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdsoft.DailyGamification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3BB134612A4B85CD0048A310 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdsoft.DailyGamificationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyGamification.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DailyGamification";
+			};
+			name = Debug;
+		};
+		3BB134622A4B85CD0048A310 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdsoft.DailyGamificationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyGamification.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DailyGamification";
+			};
+			name = Release;
+		};
+		3BB134642A4B85CD0048A310 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdsoft.DailyGamificationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DailyGamification;
+			};
+			name = Debug;
+		};
+		3BB134652A4B85CD0048A310 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdsoft.DailyGamificationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DailyGamification;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BB134342A4B85CC0048A310 /* Build configuration list for PBXProject "DailyGamification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BB1345B2A4B85CD0048A310 /* Debug */,
+				3BB1345C2A4B85CD0048A310 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BB1345D2A4B85CD0048A310 /* Build configuration list for PBXNativeTarget "DailyGamification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BB1345E2A4B85CD0048A310 /* Debug */,
+				3BB1345F2A4B85CD0048A310 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BB134602A4B85CD0048A310 /* Build configuration list for PBXNativeTarget "DailyGamificationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BB134612A4B85CD0048A310 /* Debug */,
+				3BB134622A4B85CD0048A310 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BB134632A4B85CD0048A310 /* Build configuration list for PBXNativeTarget "DailyGamificationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BB134642A4B85CD0048A310 /* Debug */,
+				3BB134652A4B85CD0048A310 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BB134312A4B85CC0048A310 /* Project object */;
+}
