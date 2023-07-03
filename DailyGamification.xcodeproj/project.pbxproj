@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0867D92A4CADA300ABF9CA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867D82A4CADA300ABF9CA /* Realm */; };
+		3B0867DB2A4CADA300ABF9CA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867DA2A4CADA300ABF9CA /* RealmSwift */; };
+		3B0867DE2A4CAE2F00ABF9CA /* DailyLogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */; };
+		3B0867E02A4D991700ABF9CA /* DailyLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0867DF2A4D991700ABF9CA /* DailyLogView.swift */; };
+		3B0867E22A4DBFB400ABF9CA /* AddNumericLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0867E12A4DBFB400ABF9CA /* AddNumericLogView.swift */; };
+		3B86FE3C2A4F28CD007F8CFE /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 3B86FE3B2A4F28CD007F8CFE /* Documentation.docc */; };
+		3B9A3E362A4F824C00071C67 /* AddCheckboxLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A3E352A4F824C00071C67 /* AddCheckboxLogView.swift */; };
+		3B9A3E382A501A2700071C67 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A3E372A501A2700071C67 /* Helpers.swift */; };
 		3BB1343D2A4B85CC0048A310 /* DailyGamificationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1343C2A4B85CC0048A310 /* DailyGamificationApp.swift */; };
 		3BB1343F2A4B85CC0048A310 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1343E2A4B85CC0048A310 /* ContentView.swift */; };
 		3BB134412A4B85CD0048A310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BB134402A4B85CD0048A310 /* Assets.xcassets */; };
@@ -14,6 +22,10 @@
 		3BB1344E2A4B85CD0048A310 /* DailyGamificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1344D2A4B85CD0048A310 /* DailyGamificationTests.swift */; };
 		3BB134582A4B85CD0048A310 /* DailyGamificationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB134572A4B85CD0048A310 /* DailyGamificationUITests.swift */; };
 		3BB1345A2A4B85CD0048A310 /* DailyGamificationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB134592A4B85CD0048A310 /* DailyGamificationUITestsLaunchTests.swift */; };
+		3BB134672A4B867B0048A310 /* DashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB134662A4B867B0048A310 /* DashBoard.swift */; };
+		3BB134692A4B89430048A310 /* NumericLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB134682A4B89430048A310 /* NumericLogView.swift */; };
+		3BDED7352A4B916A00117ED8 /* CheckboxLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDED7342A4B916A00117ED8 /* CheckboxLogView.swift */; };
+		3BFE8C862A51724800B97ECE /* TADA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFE8C852A51724800B97ECE /* TADA.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogItem.swift; sourceTree = "<group>"; };
+		3B0867DF2A4D991700ABF9CA /* DailyLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogView.swift; sourceTree = "<group>"; };
+		3B0867E12A4DBFB400ABF9CA /* AddNumericLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNumericLogView.swift; sourceTree = "<group>"; };
+		3B86FE3B2A4F28CD007F8CFE /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
+		3B9A3E352A4F824C00071C67 /* AddCheckboxLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCheckboxLogView.swift; sourceTree = "<group>"; };
+		3B9A3E372A501A2700071C67 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		3BB134392A4B85CC0048A310 /* DailyGamification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyGamification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB1343C2A4B85CC0048A310 /* DailyGamificationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGamificationApp.swift; sourceTree = "<group>"; };
 		3BB1343E2A4B85CC0048A310 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +62,10 @@
 		3BB134532A4B85CD0048A310 /* DailyGamificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyGamificationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB134572A4B85CD0048A310 /* DailyGamificationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGamificationUITests.swift; sourceTree = "<group>"; };
 		3BB134592A4B85CD0048A310 /* DailyGamificationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGamificationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3BB134662A4B867B0048A310 /* DashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoard.swift; sourceTree = "<group>"; };
+		3BB134682A4B89430048A310 /* NumericLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericLogView.swift; sourceTree = "<group>"; };
+		3BDED7342A4B916A00117ED8 /* CheckboxLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxLogView.swift; sourceTree = "<group>"; };
+		3BFE8C852A51724800B97ECE /* TADA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TADA.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B0867DB2A4CADA300ABF9CA /* RealmSwift in Frameworks */,
+				3B0867D92A4CADA300ABF9CA /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,9 +95,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B0867DC2A4CADAC00ABF9CA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		3BB134302A4B85CC0048A310 = {
 			isa = PBXGroup;
 			children = (
+				3B86FE3B2A4F28CD007F8CFE /* Documentation.docc */,
+				3B0867DC2A4CADAC00ABF9CA /* model */,
 				3BB1343B2A4B85CC0048A310 /* DailyGamification */,
 				3BB1344C2A4B85CD0048A310 /* DailyGamificationTests */,
 				3BB134562A4B85CD0048A310 /* DailyGamificationUITests */,
@@ -98,6 +132,14 @@
 				3BB1343E2A4B85CC0048A310 /* ContentView.swift */,
 				3BB134402A4B85CD0048A310 /* Assets.xcassets */,
 				3BB134422A4B85CD0048A310 /* Preview Content */,
+				3BB134662A4B867B0048A310 /* DashBoard.swift */,
+				3BFE8C852A51724800B97ECE /* TADA.swift */,
+				3B9A3E372A501A2700071C67 /* Helpers.swift */,
+				3B0867DF2A4D991700ABF9CA /* DailyLogView.swift */,
+				3BB134682A4B89430048A310 /* NumericLogView.swift */,
+				3B0867E12A4DBFB400ABF9CA /* AddNumericLogView.swift */,
+				3B9A3E352A4F824C00071C67 /* AddCheckboxLogView.swift */,
+				3BDED7342A4B916A00117ED8 /* CheckboxLogView.swift */,
 			);
 			path = DailyGamification;
 			sourceTree = "<group>";
@@ -143,6 +185,10 @@
 			dependencies = (
 			);
 			name = DailyGamification;
+			packageProductDependencies = (
+				3B0867D82A4CADA300ABF9CA /* Realm */,
+				3B0867DA2A4CADA300ABF9CA /* RealmSwift */,
+			);
 			productName = DailyGamification;
 			productReference = 3BB134392A4B85CC0048A310 /* DailyGamification.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +261,9 @@
 				Base,
 			);
 			mainGroup = 3BB134302A4B85CC0048A310;
+			packageReferences = (
+				3B0867D72A4CADA200ABF9CA /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 3BB1343A2A4B85CC0048A310 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +306,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B9A3E362A4F824C00071C67 /* AddCheckboxLogView.swift in Sources */,
+				3B0867E02A4D991700ABF9CA /* DailyLogView.swift in Sources */,
+				3BDED7352A4B916A00117ED8 /* CheckboxLogView.swift in Sources */,
+				3BFE8C862A51724800B97ECE /* TADA.swift in Sources */,
+				3B0867DE2A4CAE2F00ABF9CA /* DailyLogItem.swift in Sources */,
+				3B9A3E382A501A2700071C67 /* Helpers.swift in Sources */,
+				3B0867E22A4DBFB400ABF9CA /* AddNumericLogView.swift in Sources */,
+				3B86FE3C2A4F28CD007F8CFE /* Documentation.docc in Sources */,
+				3BB134692A4B89430048A310 /* NumericLogView.swift in Sources */,
+				3BB134672A4B867B0048A310 /* DashBoard.swift in Sources */,
 				3BB1343F2A4B85CC0048A310 /* ContentView.swift in Sources */,
 				3BB1343D2A4B85CC0048A310 /* DailyGamificationApp.swift in Sources */,
 			);
@@ -417,6 +476,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyGamification/Preview Content\"";
+				DEVELOPMENT_TEAM = 5CRUDK6S53;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -445,6 +505,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyGamification/Preview Content\"";
+				DEVELOPMENT_TEAM = 5CRUDK6S53;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -577,6 +638,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B0867D72A4CADA200ABF9CA /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B0867D82A4CADA300ABF9CA /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B0867D72A4CADA200ABF9CA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		3B0867DA2A4CADA300ABF9CA /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B0867D72A4CADA200ABF9CA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3BB134312A4B85CC0048A310 /* Project object */;
 }
