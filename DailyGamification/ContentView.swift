@@ -10,20 +10,19 @@ import RealmSwift
 
 struct ContentView: View {
     @ObservedRealmObject var gamification: GamificationDiary
-  
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-            NavigationLink(destination: DashBoard()) {
-                Text("OPEN DASHBOARD")
+        NavigationView {
+            VStack {
+                NavigationLink(destination: DashBoardView()) {
+                    Text("OPEN DASHBOARD")
+                }
             }
+            .padding()
         }
-        .padding()
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
