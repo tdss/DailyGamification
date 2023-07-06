@@ -23,11 +23,11 @@ struct AddNumericLogView: View {
                 Text("Pick a name for it:")
                 TextField("pushups", text: $name)
                 Text("How much points per item? (1-easy, 10-hard):")
-
+                
                 Stepper("\(multiplier)",
                         value: $multiplier,
                         in: 1...10
-                    )
+                )
                 
                 Button {
                     
@@ -47,7 +47,7 @@ struct AddNumericLogView: View {
                 }
             }
         }
-
+        
     }
 }
 

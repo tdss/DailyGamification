@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021BD83A2A54437800761E28 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021BD8392A54437800761E28 /* WelcomeView.swift */; };
+		021BD83D2A5444AB00761E28 /* DashboardItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021BD83C2A5444AB00761E28 /* DashboardItemRow.swift */; };
+		021BD8402A54970700761E28 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 021BD83F2A54970700761E28 /* Lottie */; };
+		021BD8422A56D1C000761E28 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021BD8412A56D1C000761E28 /* RoundedButton.swift */; };
 		3B0867D92A4CADA300ABF9CA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867D82A4CADA300ABF9CA /* Realm */; };
 		3B0867DB2A4CADA300ABF9CA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867DA2A4CADA300ABF9CA /* RealmSwift */; };
 		3B0867DE2A4CAE2F00ABF9CA /* DailyLogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */; };
@@ -22,9 +26,9 @@
 		3BB1344E2A4B85CD0048A310 /* DailyGamificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1344D2A4B85CD0048A310 /* DailyGamificationTests.swift */; };
 		3BB134582A4B85CD0048A310 /* DailyGamificationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB134572A4B85CD0048A310 /* DailyGamificationUITests.swift */; };
 		3BB1345A2A4B85CD0048A310 /* DailyGamificationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB134592A4B85CD0048A310 /* DailyGamificationUITestsLaunchTests.swift */; };
-		3BB134672A4B867B0048A310 /* DashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB134662A4B867B0048A310 /* DashBoard.swift */; };
-		3BB134692A4B89430048A310 /* NumericLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB134682A4B89430048A310 /* NumericLogView.swift */; };
-		3BDED7352A4B916A00117ED8 /* CheckboxLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDED7342A4B916A00117ED8 /* CheckboxLogView.swift */; };
+		3BB134672A4B867B0048A310 /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB134662A4B867B0048A310 /* DashBoardView.swift */; };
+		3BB134692A4B89430048A310 /* NumericLogRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB134682A4B89430048A310 /* NumericLogRow.swift */; };
+		3BDED7352A4B916A00117ED8 /* ClaimTaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDED7342A4B916A00117ED8 /* ClaimTaskRow.swift */; };
 		3BFE8C862A51724800B97ECE /* TADA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFE8C852A51724800B97ECE /* TADA.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021BD8392A54437800761E28 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		021BD83C2A5444AB00761E28 /* DashboardItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardItemRow.swift; sourceTree = "<group>"; };
+		021BD8412A56D1C000761E28 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogItem.swift; sourceTree = "<group>"; };
 		3B0867DF2A4D991700ABF9CA /* DailyLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogView.swift; sourceTree = "<group>"; };
 		3B0867E12A4DBFB400ABF9CA /* AddNumericLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNumericLogView.swift; sourceTree = "<group>"; };
@@ -62,9 +69,9 @@
 		3BB134532A4B85CD0048A310 /* DailyGamificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyGamificationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB134572A4B85CD0048A310 /* DailyGamificationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGamificationUITests.swift; sourceTree = "<group>"; };
 		3BB134592A4B85CD0048A310 /* DailyGamificationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGamificationUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3BB134662A4B867B0048A310 /* DashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoard.swift; sourceTree = "<group>"; };
-		3BB134682A4B89430048A310 /* NumericLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericLogView.swift; sourceTree = "<group>"; };
-		3BDED7342A4B916A00117ED8 /* CheckboxLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxLogView.swift; sourceTree = "<group>"; };
+		3BB134662A4B867B0048A310 /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
+		3BB134682A4B89430048A310 /* NumericLogRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericLogRow.swift; sourceTree = "<group>"; };
+		3BDED7342A4B916A00117ED8 /* ClaimTaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimTaskRow.swift; sourceTree = "<group>"; };
 		3BFE8C852A51724800B97ECE /* TADA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TADA.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +82,7 @@
 			files = (
 				3B0867DB2A4CADA300ABF9CA /* RealmSwift in Frameworks */,
 				3B0867D92A4CADA300ABF9CA /* Realm in Frameworks */,
+				021BD8402A54970700761E28 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,19 +103,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B0867DC2A4CADAC00ABF9CA /* model */ = {
+		021BD8382A54436600761E28 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B0867DF2A4D991700ABF9CA /* DailyLogView.swift */,
+				3BB134662A4B867B0048A310 /* DashBoardView.swift */,
+				021BD8392A54437800761E28 /* WelcomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		021BD83B2A54449900761E28 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3BB134682A4B89430048A310 /* NumericLogRow.swift */,
+				021BD83C2A5444AB00761E28 /* DashboardItemRow.swift */,
+				3BDED7342A4B916A00117ED8 /* ClaimTaskRow.swift */,
+				021BD8412A56D1C000761E28 /* RoundedButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3B0867DC2A4CADAC00ABF9CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */,
 			);
-			path = model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		3BB134302A4B85CC0048A310 = {
 			isa = PBXGroup;
 			children = (
 				3B86FE3B2A4F28CD007F8CFE /* Documentation.docc */,
-				3B0867DC2A4CADAC00ABF9CA /* model */,
 				3BB1343B2A4B85CC0048A310 /* DailyGamification */,
 				3BB1344C2A4B85CD0048A310 /* DailyGamificationTests */,
 				3BB134562A4B85CD0048A310 /* DailyGamificationUITests */,
@@ -128,18 +156,17 @@
 		3BB1343B2A4B85CC0048A310 /* DailyGamification */ = {
 			isa = PBXGroup;
 			children = (
+				021BD83B2A54449900761E28 /* Components */,
+				3B0867DC2A4CADAC00ABF9CA /* Models */,
+				021BD8382A54436600761E28 /* Views */,
 				3BB1343C2A4B85CC0048A310 /* DailyGamificationApp.swift */,
 				3BB1343E2A4B85CC0048A310 /* ContentView.swift */,
 				3BB134402A4B85CD0048A310 /* Assets.xcassets */,
 				3BB134422A4B85CD0048A310 /* Preview Content */,
-				3BB134662A4B867B0048A310 /* DashBoard.swift */,
 				3BFE8C852A51724800B97ECE /* TADA.swift */,
 				3B9A3E372A501A2700071C67 /* Helpers.swift */,
-				3B0867DF2A4D991700ABF9CA /* DailyLogView.swift */,
-				3BB134682A4B89430048A310 /* NumericLogView.swift */,
 				3B0867E12A4DBFB400ABF9CA /* AddNumericLogView.swift */,
 				3B9A3E352A4F824C00071C67 /* AddCheckboxLogView.swift */,
-				3BDED7342A4B916A00117ED8 /* CheckboxLogView.swift */,
 			);
 			path = DailyGamification;
 			sourceTree = "<group>";
@@ -188,6 +215,7 @@
 			packageProductDependencies = (
 				3B0867D82A4CADA300ABF9CA /* Realm */,
 				3B0867DA2A4CADA300ABF9CA /* RealmSwift */,
+				021BD83F2A54970700761E28 /* Lottie */,
 			);
 			productName = DailyGamification;
 			productReference = 3BB134392A4B85CC0048A310 /* DailyGamification.app */;
@@ -263,6 +291,7 @@
 			mainGroup = 3BB134302A4B85CC0048A310;
 			packageReferences = (
 				3B0867D72A4CADA200ABF9CA /* XCRemoteSwiftPackageReference "realm-swift" */,
+				021BD83E2A54970700761E28 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 3BB1343A2A4B85CC0048A310 /* Products */;
 			projectDirPath = "";
@@ -306,16 +335,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021BD83D2A5444AB00761E28 /* DashboardItemRow.swift in Sources */,
+				021BD8422A56D1C000761E28 /* RoundedButton.swift in Sources */,
 				3B9A3E362A4F824C00071C67 /* AddCheckboxLogView.swift in Sources */,
 				3B0867E02A4D991700ABF9CA /* DailyLogView.swift in Sources */,
-				3BDED7352A4B916A00117ED8 /* CheckboxLogView.swift in Sources */,
+				3BDED7352A4B916A00117ED8 /* ClaimTaskRow.swift in Sources */,
 				3BFE8C862A51724800B97ECE /* TADA.swift in Sources */,
 				3B0867DE2A4CAE2F00ABF9CA /* DailyLogItem.swift in Sources */,
 				3B9A3E382A501A2700071C67 /* Helpers.swift in Sources */,
 				3B0867E22A4DBFB400ABF9CA /* AddNumericLogView.swift in Sources */,
+				021BD83A2A54437800761E28 /* WelcomeView.swift in Sources */,
 				3B86FE3C2A4F28CD007F8CFE /* Documentation.docc in Sources */,
-				3BB134692A4B89430048A310 /* NumericLogView.swift in Sources */,
-				3BB134672A4B867B0048A310 /* DashBoard.swift in Sources */,
+				3BB134692A4B89430048A310 /* NumericLogRow.swift in Sources */,
+				3BB134672A4B867B0048A310 /* DashBoardView.swift in Sources */,
 				3BB1343F2A4B85CC0048A310 /* ContentView.swift in Sources */,
 				3BB1343D2A4B85CC0048A310 /* DailyGamificationApp.swift in Sources */,
 			);
@@ -640,6 +672,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		021BD83E2A54970700761E28 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		3B0867D72A4CADA200ABF9CA /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -651,6 +691,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		021BD83F2A54970700761E28 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 021BD83E2A54970700761E28 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		3B0867D82A4CADA300ABF9CA /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3B0867D72A4CADA200ABF9CA /* XCRemoteSwiftPackageReference "realm-swift" */;
