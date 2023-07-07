@@ -13,64 +13,95 @@ struct DailyLogView: View {
     @State private var isNumericPresented: Bool = false
     @State private var isCheckboxPresented: Bool = false
     @State private var selection: String = "💪"
+    @State var showingBottomSheet = false
+    
     let dateFormatter = DateFormatter()
     
     var body: some View {
-        NavigationView {
-            VStack {
-                header
-                logSelection
-                List {
-                    ForEach(dailyLog.numericLogs) { numericLog in
-                        NumericLogRow(numericLog: numericLog)
-                            .listRowInsets(EdgeInsets())
-                            .padding(.vertical, 8) // Add vertical padding
-                    }
-                    .onDelete(perform: $dailyLog.numericLogs.remove)
-                    .listRowSeparator(.hidden)
-
-                    ForEach(dailyLog.checkboxLogs) { checkboxLog in
-                        ClaimTaskRow(checkboxLog: checkboxLog)
-                            .listRowInsets(EdgeInsets())
-                            .padding(.vertical, 8) // Add vertical padding
-                    }
-                    .onDelete(perform: $dailyLog.checkboxLogs.remove)
-                    .listRowSeparator(.hidden)
+        VStack {
+            header
+            logSelection
+            HStack {
+                Button(action: {
+                    isNumericPresented = true
+                    showingBottomSheet = true
+                    
+                }) {
+                    Text("Add Counter")
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 10)
+                        .background(Capsule().fill(Color.blue))
+                        .foregroundColor(.white)
+                        .shadow(radius: 5)
                 }
-                .listStyle(.inset)
-                .background(Color.white) // Set the background color to white
-
-
+                .buttonStyle(PlainButtonStyle())
                 
+                Button(action: {
+                    isCheckboxPresented = true
+                    showingBottomSheet = true
+                }) {
+                    Text("Add Check")
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 10)
+                        .background(Capsule().fill(Color.green))
+                        .foregroundColor(.white)
+                        .shadow(radius: 5)
+                }
+                .buttonStyle(PlainButtonStyle())
             }
-            .sheet(isPresented: $isNumericPresented, content: {
-                AddNumericLogView(dailyLogItem: dailyLog)
-            })
-            .sheet(isPresented: $isCheckboxPresented, content: {
-                AddCheckboxLogView(dailyLogItem: dailyLog)
-            })
-            //            .toolbar {
-            //                ToolbarItem(placement: .navigationBarTrailing) {
-            //                    Button {
-            //                        isNumericPresented = true
-            //                        //AddNumericLogView(dailyLogItem: dailyLog)
-            //                        //$dailyLog.numericLogs.append(NumericLog())
-            //                    } label: {
-            //                        Text("add counter")
-            //                    }
-            //                }
-            //                ToolbarItem(placement: .navigationBarLeading) {
-            //                    Button {
-            //                        isCheckboxPresented = true
-            //                        //AddNumericLogView(dailyLogItem: dailyLog)
-            //                        //$dailyLog.numericLogs.append(NumericLog())
-            //                    } label: {
-            //                        Text("add check")
-            //                    }
-            //                }
-            //            }
-            //            .navigationBarTitle(
-            //                (dailyLog.dailyTotal > 0) ? "DailyTotal : \(dailyLog.dailyTotal)" : "Get started!")
+            .padding()
+            
+            
+            
+            List {
+                ForEach(dailyLog.numericLogs) { numericLog in
+                    NumericLogRow(numericLog: numericLog)
+                        .listRowInsets(EdgeInsets())
+                        .padding(.vertical, 8)
+                }
+                .onDelete(perform: $dailyLog.numericLogs.remove)
+                .listRowSeparator(.hidden)
+                
+                ForEach(dailyLog.checkboxLogs) { checkboxLog in
+                    ClaimTaskRow(checkboxLog: checkboxLog)
+                        .listRowInsets(EdgeInsets())
+                        .padding(.vertical, 8)
+                }
+                .onDelete(perform: $dailyLog.checkboxLogs.remove)
+                .listRowSeparator(.hidden)
+            }
+            .listStyle(.inset)
+            .background(Color.white)
+        }
+        .sheet(isPresented: $showingBottomSheet) {
+            if(isNumericPresented) {
+                AddLogView(dailyLogItem: dailyLog, achievementType: .numeric) { name, multiplier, dailyLogItem in
+                    let numericLog = NumericLog()
+                    numericLog.name = name
+                    numericLog.multiplier = multiplier
+                    if let newItem = dailyLogItem.thaw(),
+                       let realm = newItem.realm
+                    {
+                        try? realm.write {
+                            newItem.numericLogs.append(numericLog)
+                        }
+                    }
+                }
+                .presentationDetents([.height(500), .large])
+            }else {
+                AddLogView(dailyLogItem: dailyLog, achievementType: .checkbox) { name, multiplier, dailyLogItem in
+                    let checkboxLog = CheckboxLog()
+                    checkboxLog.name = name
+                    checkboxLog.multiplier = multiplier
+                    if let newItem = dailyLogItem.thaw(),
+                       let realm = newItem.realm
+                    {
+                        try? realm.write {
+                            newItem.checkboxLogs.append(checkboxLog)
+                        }
+                    }
+                }
+            }
             
         }
     }

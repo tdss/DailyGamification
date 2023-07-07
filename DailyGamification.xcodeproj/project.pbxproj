@@ -11,13 +11,12 @@
 		021BD83D2A5444AB00761E28 /* DashboardItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021BD83C2A5444AB00761E28 /* DashboardItemRow.swift */; };
 		021BD8402A54970700761E28 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 021BD83F2A54970700761E28 /* Lottie */; };
 		021BD8422A56D1C000761E28 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021BD8412A56D1C000761E28 /* RoundedButton.swift */; };
+		021BD8442A57E8D000761E28 /* AddLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021BD8432A57E8D000761E28 /* AddLogView.swift */; };
 		3B0867D92A4CADA300ABF9CA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867D82A4CADA300ABF9CA /* Realm */; };
 		3B0867DB2A4CADA300ABF9CA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867DA2A4CADA300ABF9CA /* RealmSwift */; };
 		3B0867DE2A4CAE2F00ABF9CA /* DailyLogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */; };
 		3B0867E02A4D991700ABF9CA /* DailyLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0867DF2A4D991700ABF9CA /* DailyLogView.swift */; };
-		3B0867E22A4DBFB400ABF9CA /* AddNumericLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0867E12A4DBFB400ABF9CA /* AddNumericLogView.swift */; };
 		3B86FE3C2A4F28CD007F8CFE /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 3B86FE3B2A4F28CD007F8CFE /* Documentation.docc */; };
-		3B9A3E362A4F824C00071C67 /* AddCheckboxLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A3E352A4F824C00071C67 /* AddCheckboxLogView.swift */; };
 		3B9A3E382A501A2700071C67 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A3E372A501A2700071C67 /* Helpers.swift */; };
 		3BB1343D2A4B85CC0048A310 /* DailyGamificationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1343C2A4B85CC0048A310 /* DailyGamificationApp.swift */; };
 		3BB1343F2A4B85CC0048A310 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1343E2A4B85CC0048A310 /* ContentView.swift */; };
@@ -53,11 +52,10 @@
 		021BD8392A54437800761E28 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		021BD83C2A5444AB00761E28 /* DashboardItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardItemRow.swift; sourceTree = "<group>"; };
 		021BD8412A56D1C000761E28 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		021BD8432A57E8D000761E28 /* AddLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogView.swift; sourceTree = "<group>"; };
 		3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogItem.swift; sourceTree = "<group>"; };
 		3B0867DF2A4D991700ABF9CA /* DailyLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogView.swift; sourceTree = "<group>"; };
-		3B0867E12A4DBFB400ABF9CA /* AddNumericLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNumericLogView.swift; sourceTree = "<group>"; };
 		3B86FE3B2A4F28CD007F8CFE /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
-		3B9A3E352A4F824C00071C67 /* AddCheckboxLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCheckboxLogView.swift; sourceTree = "<group>"; };
 		3B9A3E372A501A2700071C67 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		3BB134392A4B85CC0048A310 /* DailyGamification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyGamification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB1343C2A4B85CC0048A310 /* DailyGamificationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGamificationApp.swift; sourceTree = "<group>"; };
@@ -120,6 +118,7 @@
 				021BD83C2A5444AB00761E28 /* DashboardItemRow.swift */,
 				3BDED7342A4B916A00117ED8 /* ClaimTaskRow.swift */,
 				021BD8412A56D1C000761E28 /* RoundedButton.swift */,
+				021BD8432A57E8D000761E28 /* AddLogView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -165,8 +164,6 @@
 				3BB134422A4B85CD0048A310 /* Preview Content */,
 				3BFE8C852A51724800B97ECE /* TADA.swift */,
 				3B9A3E372A501A2700071C67 /* Helpers.swift */,
-				3B0867E12A4DBFB400ABF9CA /* AddNumericLogView.swift */,
-				3B9A3E352A4F824C00071C67 /* AddCheckboxLogView.swift */,
 			);
 			path = DailyGamification;
 			sourceTree = "<group>";
@@ -336,14 +333,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				021BD83D2A5444AB00761E28 /* DashboardItemRow.swift in Sources */,
+				021BD8442A57E8D000761E28 /* AddLogView.swift in Sources */,
 				021BD8422A56D1C000761E28 /* RoundedButton.swift in Sources */,
-				3B9A3E362A4F824C00071C67 /* AddCheckboxLogView.swift in Sources */,
 				3B0867E02A4D991700ABF9CA /* DailyLogView.swift in Sources */,
 				3BDED7352A4B916A00117ED8 /* ClaimTaskRow.swift in Sources */,
 				3BFE8C862A51724800B97ECE /* TADA.swift in Sources */,
 				3B0867DE2A4CAE2F00ABF9CA /* DailyLogItem.swift in Sources */,
 				3B9A3E382A501A2700071C67 /* Helpers.swift in Sources */,
-				3B0867E22A4DBFB400ABF9CA /* AddNumericLogView.swift in Sources */,
 				021BD83A2A54437800761E28 /* WelcomeView.swift in Sources */,
 				3B86FE3C2A4F28CD007F8CFE /* Documentation.docc in Sources */,
 				3BB134692A4B89430048A310 /* NumericLogRow.swift in Sources */,
