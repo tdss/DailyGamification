@@ -101,6 +101,7 @@ struct DailyLogView: View {
                         }
                     }
                 }
+                .presentationDetents([.height(500), .large])
             }
             
         }

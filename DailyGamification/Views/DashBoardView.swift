@@ -18,6 +18,15 @@ struct DashBoardView: View {
     var body: some View {
         NavigationView {
             VStack {
+                HStack {
+                    addButton
+                    Spacer()
+                        .frame(width: 15)
+                    showButton
+                    Spacer()
+                    totalPointsText
+                }
+                .padding()
                 List() {
                     ForEach(dailyLogItems) { dailyLog in
                         NavigationLink(destination: DailyLogView(dailyLog: dailyLog)) {
@@ -31,17 +40,6 @@ struct DashBoardView: View {
                 .listStyle(.inset)
 
                 Spacer()
-
-                HStack {
-                    addButton
-                    Spacer()
-                        .frame(width: 15)
-                    showButton
-                    Spacer()
-                    totalPointsText
-                }
-                .padding()
-                .background(Color.white.shadow(radius: 20, y: -5))
             }
         }
         .navigationTitle("Dashboard")
