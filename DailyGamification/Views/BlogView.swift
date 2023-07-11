@@ -10,32 +10,34 @@ import SwiftUI
 struct BlogView: View {
     @Environment(\.colorScheme) var colorScheme
     @StateObject var blogModel: BlogModel = BlogModel()
-    var blogArticlesItems: [BlogArticleItem]?
     
     var body: some View {
         NavigationView {
             VStack {
                 header
                 List {
-                    ForEach(blogModel.blogArticles, id: \.title) { blogArticleItem in
-                        ZStack {
-                            NavigationLink(destination: BlogArticleDetail(blogArticle: blogArticleItem)) {
-                                EmptyView()
+                    switch blogModel.loadingState {
+                    case .loading:
+                        Text("loading")
+                    case .idle, .refreshing:
+                        ForEach(blogModel.blogArticles, id: \.id) { blogArticleItem in
+                            ZStack {
+                                NavigationLink(destination: BlogArticleDetail(blogArticle: blogArticleItem)) {
+                                    EmptyView()
+                                }
+                                BlogArticle(blogArticleItem: blogArticleItem)
                             }
-                            BlogArticle(blogArticleItem: blogArticleItem)
-                                .listRowSeparator(.hidden)
+                            .listRowSeparator(.hidden)
                         }
-                        .listRowSeparator(.hidden)
                     }
                 }
                 .listStyle(.inset)
                 .task {
                     await blogModel.fetch()
-                    print(blogModel.$blogArticles)
                 }
                 .refreshable {
-                    await blogModel.fetch()
                     print(blogModel.$blogArticles)
+                    await blogModel.fetch()
                 }
                 .background(Color.white)
             }
@@ -98,6 +100,6 @@ var blogArticlesItems: [BlogArticleItem] = [
 
 struct BlogView_Previews: PreviewProvider {
     static var previews: some View {
-        BlogView(blogArticlesItems: blogArticlesItems)
+        BlogView()
     }
 }

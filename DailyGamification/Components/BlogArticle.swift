@@ -16,12 +16,13 @@ struct BlogArticle: View {
             AsyncImage(url: URL(string: blogArticleItem.image)) { image in
                 image
                     .resizable()
+                    .frame(height: 250)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .shadow(color: .gray, radius: 2, x: 0, y: 2)
             } placeholder: {
                 Color.gray
             }
-            .frame(width: .infinity, height: 250)
+            .frame(height: 250)
             .padding(.vertical, 6)
 
             HStack(alignment: .center) {

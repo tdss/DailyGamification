@@ -31,25 +31,25 @@ struct BlogArticleDetail: View {
                     }
                     .padding(.vertical, 5)
                     RichText(html: blogArticle.content)
-                                   .lineHeight(130)
-                                   .colorScheme(.auto)
-                                   .imageRadius(12)
-                                   .fontType(.system)
-                                   .foregroundColor(light: Color.primary, dark: Color.white)
-                                   .linkColor(light: Color.blue, dark: Color.blue)
-                                   .colorPreference(forceColor: .onlyLinks)
-                                   .linkOpenType(.SFSafariView())
-                                   .customCSS("")
-                                   .placeholder {
-                                       VStack {
-                                           Spacer()
-                                           ProgressView()
-                                               .scaleEffect(1.2)
-                                           Spacer()
-                                       }
-                                       .frame(height: 200)
-                                   }
-                                   .transition(.easeOut)
+                        .lineHeight(130)
+                        .colorScheme(.auto)
+                        .imageRadius(12)
+                        .fontType(.system)
+                        .foregroundColor(light: Color.primary, dark: Color.white)
+                        .linkColor(light: Color.blue, dark: Color.blue)
+                        .colorPreference(forceColor: .onlyLinks)
+                        .linkOpenType(.SFSafariView())
+                        .customCSS("")
+                        .placeholder {
+                            VStack {
+                                Spacer()
+                                ProgressView()
+                                    .scaleEffect(1.2)
+                                Spacer()
+                            }
+                            .frame(height: 200)
+                        }
+                        .transition(.easeOut)
                 }
                 .padding()
             }

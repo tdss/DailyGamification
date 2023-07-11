@@ -25,6 +25,10 @@
 		021E83C22A580A63005178B8 /* AboutAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E83C12A580A63005178B8 /* AboutAppView.swift */; };
 		021E83C42A581806005178B8 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E83C32A581806005178B8 /* CustomTabBar.swift */; };
 		0288F0CB2A5D64B100538903 /* RichText in Frameworks */ = {isa = PBXBuildFile; productRef = 0288F0CA2A5D64B100538903 /* RichText */; };
+		0288F0CE2A5D768C00538903 /* AboutUsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288F0CD2A5D768C00538903 /* AboutUsModel.swift */; };
+		0288F0D02A5D769D00538903 /* AboutUsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288F0CF2A5D769D00538903 /* AboutUsResponse.swift */; };
+		0288F0D32A5D78EE00538903 /* EmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288F0D22A5D78EE00538903 /* EmailController.swift */; };
+		0288F0D82A5D86CA00538903 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288F0D72A5D86CA00538903 /* AboutUsView.swift */; };
 		3B0867D92A4CADA300ABF9CA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867D82A4CADA300ABF9CA /* Realm */; };
 		3B0867DB2A4CADA300ABF9CA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867DA2A4CADA300ABF9CA /* RealmSwift */; };
 		3B0867DE2A4CAE2F00ABF9CA /* DailyLogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */; };
@@ -78,6 +82,10 @@
 		021E83BF2A580A57005178B8 /* BlogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogView.swift; sourceTree = "<group>"; };
 		021E83C12A580A63005178B8 /* AboutAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppView.swift; sourceTree = "<group>"; };
 		021E83C32A581806005178B8 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		0288F0CD2A5D768C00538903 /* AboutUsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsModel.swift; sourceTree = "<group>"; };
+		0288F0CF2A5D769D00538903 /* AboutUsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsResponse.swift; sourceTree = "<group>"; };
+		0288F0D22A5D78EE00538903 /* EmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailController.swift; sourceTree = "<group>"; };
+		0288F0D72A5D86CA00538903 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 		3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogItem.swift; sourceTree = "<group>"; };
 		3B0867DF2A4D991700ABF9CA /* DailyLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogView.swift; sourceTree = "<group>"; };
 		3B86FE3B2A4F28CD007F8CFE /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
@@ -148,6 +156,7 @@
 				021E83BF2A580A57005178B8 /* BlogView.swift */,
 				021E83C12A580A63005178B8 /* AboutAppView.swift */,
 				0211F0132A5D46DD00EE20A2 /* BlogArticleDetail.swift */,
+				0288F0D72A5D86CA00538903 /* AboutUsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,9 +184,27 @@
 			path = LottieFiles;
 			sourceTree = "<group>";
 		};
+		0288F0CC2A5D767200538903 /* AboutUsModel */ = {
+			isa = PBXGroup;
+			children = (
+				0288F0CD2A5D768C00538903 /* AboutUsModel.swift */,
+				0288F0CF2A5D769D00538903 /* AboutUsResponse.swift */,
+			);
+			path = AboutUsModel;
+			sourceTree = "<group>";
+		};
+		0288F0D12A5D78DC00538903 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0288F0D22A5D78EE00538903 /* EmailController.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		3B0867DC2A4CADAC00ABF9CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0288F0CC2A5D767200538903 /* AboutUsModel */,
 				0211F00C2A5C177800EE20A2 /* BlogModel */,
 				3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */,
 			);
@@ -208,6 +235,7 @@
 		3BB1343B2A4B85CC0048A310 /* DailyGamification */ = {
 			isa = PBXGroup;
 			children = (
+				0288F0D12A5D78DC00538903 /* Utils */,
 				021E83B82A57F590005178B8 /* LottieFiles */,
 				021BD83B2A54449900761E28 /* Components */,
 				3B0867DC2A4CADAC00ABF9CA /* Models */,
@@ -402,14 +430,18 @@
 				3BFE8C862A51724800B97ECE /* TADA.swift in Sources */,
 				021E83C22A580A63005178B8 /* AboutAppView.swift in Sources */,
 				3B0867DE2A4CAE2F00ABF9CA /* DailyLogItem.swift in Sources */,
+				0288F0D02A5D769D00538903 /* AboutUsResponse.swift in Sources */,
 				3B9A3E382A501A2700071C67 /* Helpers.swift in Sources */,
 				021BD83A2A54437800761E28 /* WelcomeView.swift in Sources */,
+				0288F0D32A5D78EE00538903 /* EmailController.swift in Sources */,
 				3B86FE3C2A4F28CD007F8CFE /* Documentation.docc in Sources */,
 				3BB134692A4B89430048A310 /* NumericLogRow.swift in Sources */,
 				3BB134672A4B867B0048A310 /* DashBoardView.swift in Sources */,
 				3BB1343F2A4B85CC0048A310 /* ContentView.swift in Sources */,
+				0288F0CE2A5D768C00538903 /* AboutUsModel.swift in Sources */,
 				0211F00B2A5C177400EE20A2 /* BlogModel.swift in Sources */,
 				021E83C42A581806005178B8 /* CustomTabBar.swift in Sources */,
+				0288F0D82A5D86CA00538903 /* AboutUsView.swift in Sources */,
 				021E83BE2A5808D3005178B8 /* TabAppView.swift in Sources */,
 				021E83C02A580A57005178B8 /* BlogView.swift in Sources */,
 				3BB1343D2A4B85CC0048A310 /* DailyGamificationApp.swift in Sources */,

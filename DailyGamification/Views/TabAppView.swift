@@ -22,7 +22,7 @@ struct TabAppView: View {
                         .renderingMode(.template)
                         .resizable()
                 }
-            BlogView(blogArticlesItems: blogArticlesItems)
+            BlogView()
                 .tabItem {
                     Image("blogIcon")
                         .renderingMode(.template)

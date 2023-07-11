@@ -1,20 +1,21 @@
 //
-//  BlogModel.swift
+//  AboutUsModel.swift
 //  DailyGamification
 //
-//  Created by Gregory Moskaliuk on 10/07/2023.
+//  Created by Gregory Moskaliuk on 11/07/2023.
 //
 
 import Foundation
 
-enum BlogError: Error {
+
+enum AboutUsError: Error {
     case invalidURL
     case invalidResponse
     case invalidData
 }
 
-class BlogModel: ObservableObject {
-    @Published var blogArticles: [BlogArticleItem] = []
+class AboutUsModel: ObservableObject {
+    @Published var aboutUs: [AboutUsItem] = []
     @Published var hasError: Bool = false
     @Published var loadingState: LoadingState = .idle
     
@@ -24,28 +25,28 @@ class BlogModel: ObservableObject {
         case refreshing
     }
     
-    private let urlString = "https://dariusztarczynski.com/personal-gamification-blog.json"
+    private let urlString = "https://dariusztarczynski.com/about-us-blog.json"
     
     func fetch() async {
     
         do {
             DispatchQueue.main.async {
-                self.loadingState = self.blogArticles.isEmpty ? .loading : .refreshing
+                self.loadingState = self.aboutUs.isEmpty ? .loading : .refreshing
             }
             guard let url = URL(string: urlString) else {
-                throw BlogError.invalidURL
+                throw AboutUsError.invalidURL
             }
             
             let request = URLRequest(url: url)
             
             let (data, response) = try await URLSession.shared.data(for: request)
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                throw BlogError.invalidResponse
+                throw AboutUsError.invalidResponse
             }
             
-            let entriesCardsData = try decodeData(data)
+            let aboutUsData = try decodeData(data)
             DispatchQueue.main.async {
-                self.updateUI(with: entriesCardsData)
+                self.updateUI(with: aboutUsData)
             }
         } catch {
             print(error)
@@ -56,7 +57,7 @@ class BlogModel: ObservableObject {
         }
     }
     
-    private func decodeData(_ data: Data) throws -> [BlogArticleItem] {
+    private func decodeData(_ data: Data) throws -> [AboutUsItem] {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         // Support for fractional seconds
@@ -73,10 +74,9 @@ class BlogModel: ObservableObject {
             throw DecodingError.dataCorruptedError(in: container,
                                                    debugDescription: "Invalid date: \(dateString)")
         }
-        let blogResponse = try decoder.decode(BlogResponse.self, from: data)
+        let blogResponse = try decoder.decode(AboutUsResponse.self, from: data)
         return blogResponse.items.map { blogArticle in
-            BlogArticleItem(
-                id: UUID(),
+            AboutUsItem(
                 date: blogArticle.date,
                 title: blogArticle.title,
                 description: blogArticle.description,
@@ -88,8 +88,8 @@ class BlogModel: ObservableObject {
     }
 
     
-    private func updateUI(with blogArticles: [BlogArticleItem]) {
-        self.blogArticles = blogArticles
+    private func updateUI(with aboutUsItems: [AboutUsItem]) {
+        self.aboutUs = aboutUsItems
         self.loadingState = .idle
     }
 }

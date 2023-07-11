@@ -12,6 +12,7 @@ struct BlogResponse: Codable {
 }
 
 struct BlogArticleItem: Codable {
+    var id: UUID?
     var date: Date
     var title: String
     var description: String
