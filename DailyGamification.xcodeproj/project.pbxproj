@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0211F00B2A5C177400EE20A2 /* BlogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211F00A2A5C177400EE20A2 /* BlogModel.swift */; };
+		0211F00E2A5C185F00EE20A2 /* BlogArticleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211F00D2A5C185F00EE20A2 /* BlogArticleItem.swift */; };
+		0211F0102A5C3FEF00EE20A2 /* BlogArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211F00F2A5C3FEF00EE20A2 /* BlogArticle.swift */; };
+		0211F0122A5D3B3500EE20A2 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211F0112A5D3B3500EE20A2 /* Toast.swift */; };
+		0211F0142A5D46DD00EE20A2 /* BlogArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211F0132A5D46DD00EE20A2 /* BlogArticleDetail.swift */; };
 		021BD83A2A54437800761E28 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021BD8392A54437800761E28 /* WelcomeView.swift */; };
 		021BD83D2A5444AB00761E28 /* DashboardItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021BD83C2A5444AB00761E28 /* DashboardItemRow.swift */; };
 		021BD8402A54970700761E28 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 021BD83F2A54970700761E28 /* Lottie */; };
@@ -19,6 +24,7 @@
 		021E83C02A580A57005178B8 /* BlogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E83BF2A580A57005178B8 /* BlogView.swift */; };
 		021E83C22A580A63005178B8 /* AboutAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E83C12A580A63005178B8 /* AboutAppView.swift */; };
 		021E83C42A581806005178B8 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E83C32A581806005178B8 /* CustomTabBar.swift */; };
+		0288F0CB2A5D64B100538903 /* RichText in Frameworks */ = {isa = PBXBuildFile; productRef = 0288F0CA2A5D64B100538903 /* RichText */; };
 		3B0867D92A4CADA300ABF9CA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867D82A4CADA300ABF9CA /* Realm */; };
 		3B0867DB2A4CADA300ABF9CA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867DA2A4CADA300ABF9CA /* RealmSwift */; };
 		3B0867DE2A4CAE2F00ABF9CA /* DailyLogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */; };
@@ -56,6 +62,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0211F00A2A5C177400EE20A2 /* BlogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogModel.swift; sourceTree = "<group>"; };
+		0211F00D2A5C185F00EE20A2 /* BlogArticleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogArticleItem.swift; sourceTree = "<group>"; };
+		0211F00F2A5C3FEF00EE20A2 /* BlogArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogArticle.swift; sourceTree = "<group>"; };
+		0211F0112A5D3B3500EE20A2 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		0211F0132A5D46DD00EE20A2 /* BlogArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogArticleDetail.swift; sourceTree = "<group>"; };
 		021BD8392A54437800761E28 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		021BD83C2A5444AB00761E28 /* DashboardItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardItemRow.swift; sourceTree = "<group>"; };
 		021BD8412A56D1C000761E28 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -95,6 +106,7 @@
 				3B0867DB2A4CADA300ABF9CA /* RealmSwift in Frameworks */,
 				3B0867D92A4CADA300ABF9CA /* Realm in Frameworks */,
 				021BD8402A54970700761E28 /* Lottie in Frameworks */,
+				0288F0CB2A5D64B100538903 /* RichText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,16 +127,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0211F00C2A5C177800EE20A2 /* BlogModel */ = {
+			isa = PBXGroup;
+			children = (
+				0211F00A2A5C177400EE20A2 /* BlogModel.swift */,
+				0211F00D2A5C185F00EE20A2 /* BlogArticleItem.swift */,
+			);
+			path = BlogModel;
+			sourceTree = "<group>";
+		};
 		021BD8382A54436600761E28 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				3B0867DF2A4D991700ABF9CA /* DailyLogView.swift */,
 				3BB134662A4B867B0048A310 /* DashBoardView.swift */,
 				021BD8392A54437800761E28 /* WelcomeView.swift */,
+				021BD8432A57E8D000761E28 /* AddLogView.swift */,
 				021E83B62A57EE80005178B8 /* LottieView.swift */,
 				021E83BD2A5808D3005178B8 /* TabAppView.swift */,
 				021E83BF2A580A57005178B8 /* BlogView.swift */,
 				021E83C12A580A63005178B8 /* AboutAppView.swift */,
+				0211F0132A5D46DD00EE20A2 /* BlogArticleDetail.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,8 +159,9 @@
 				021BD83C2A5444AB00761E28 /* DashboardItemRow.swift */,
 				3BDED7342A4B916A00117ED8 /* ClaimTaskRow.swift */,
 				021BD8412A56D1C000761E28 /* RoundedButton.swift */,
-				021BD8432A57E8D000761E28 /* AddLogView.swift */,
 				021E83C32A581806005178B8 /* CustomTabBar.swift */,
+				0211F00F2A5C3FEF00EE20A2 /* BlogArticle.swift */,
+				0211F0112A5D3B3500EE20A2 /* Toast.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -154,6 +178,7 @@
 		3B0867DC2A4CADAC00ABF9CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0211F00C2A5C177800EE20A2 /* BlogModel */,
 				3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */,
 			);
 			path = Models;
@@ -242,6 +267,7 @@
 				3B0867D82A4CADA300ABF9CA /* Realm */,
 				3B0867DA2A4CADA300ABF9CA /* RealmSwift */,
 				021BD83F2A54970700761E28 /* Lottie */,
+				0288F0CA2A5D64B100538903 /* RichText */,
 			);
 			productName = DailyGamification;
 			productReference = 3BB134392A4B85CC0048A310 /* DailyGamification.app */;
@@ -318,6 +344,7 @@
 			packageReferences = (
 				3B0867D72A4CADA200ABF9CA /* XCRemoteSwiftPackageReference "realm-swift" */,
 				021BD83E2A54970700761E28 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				0288F0C92A5D64B100538903 /* XCRemoteSwiftPackageReference "RichText" */,
 			);
 			productRefGroup = 3BB1343A2A4B85CC0048A310 /* Products */;
 			projectDirPath = "";
@@ -363,8 +390,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				021BD83D2A5444AB00761E28 /* DashboardItemRow.swift in Sources */,
+				0211F0122A5D3B3500EE20A2 /* Toast.swift in Sources */,
 				021BD8442A57E8D000761E28 /* AddLogView.swift in Sources */,
+				0211F0102A5C3FEF00EE20A2 /* BlogArticle.swift in Sources */,
 				021E83B72A57EE80005178B8 /* LottieView.swift in Sources */,
+				0211F0142A5D46DD00EE20A2 /* BlogArticleDetail.swift in Sources */,
 				021BD8422A56D1C000761E28 /* RoundedButton.swift in Sources */,
 				3B0867E02A4D991700ABF9CA /* DailyLogView.swift in Sources */,
 				3BDED7352A4B916A00117ED8 /* ClaimTaskRow.swift in Sources */,
@@ -378,10 +408,12 @@
 				3BB134692A4B89430048A310 /* NumericLogRow.swift in Sources */,
 				3BB134672A4B867B0048A310 /* DashBoardView.swift in Sources */,
 				3BB1343F2A4B85CC0048A310 /* ContentView.swift in Sources */,
+				0211F00B2A5C177400EE20A2 /* BlogModel.swift in Sources */,
 				021E83C42A581806005178B8 /* CustomTabBar.swift in Sources */,
 				021E83BE2A5808D3005178B8 /* TabAppView.swift in Sources */,
 				021E83C02A580A57005178B8 /* BlogView.swift in Sources */,
 				3BB1343D2A4B85CC0048A310 /* DailyGamificationApp.swift in Sources */,
+				0211F00E2A5C185F00EE20A2 /* BlogArticleItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +744,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		0288F0C92A5D64B100538903 /* XCRemoteSwiftPackageReference "RichText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NuPlay/RichText.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		3B0867D72A4CADA200ABF9CA /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -727,6 +767,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 021BD83E2A54970700761E28 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		0288F0CA2A5D64B100538903 /* RichText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0288F0C92A5D64B100538903 /* XCRemoteSwiftPackageReference "RichText" */;
+			productName = RichText;
 		};
 		3B0867D82A4CADA300ABF9CA /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;

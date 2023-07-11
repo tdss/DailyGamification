@@ -10,7 +10,8 @@ import RealmSwift
 import Charts
 
 struct DashBoardView: View {
-    @State var showingBottomSheet = false
+    @State var showingBottomSheet: Bool = false
+    @State var isAddButtonAnimating: Bool = false
     
     @ObservedResults(DailyLogItem.self, sortDescriptor: SortDescriptor.init(keyPath: "date", ascending: false)) var dailyLogItems
     @ObservedResults(DailyLogItem.self, sortDescriptor: SortDescriptor.init(keyPath: "date", ascending: true)) var dailyLogItemsReversed
@@ -27,24 +28,36 @@ struct DashBoardView: View {
                     totalPointsText
                 }
                 .padding()
-                List() {
-                    ForEach(dailyLogItems) { dailyLog in
-                        NavigationLink(destination: DailyLogView(dailyLog: dailyLog)) {
-                            DashboardItemRow(dailyLog: dailyLog)
+                if(dailyLogItems.count >= 1) {
+                    List {
+                        ForEach(dailyLogItems) { dailyLog in
+                            ZStack {
+                                NavigationLink(destination: DailyLogView(dailyLog: dailyLog)) {
+                                    EmptyView()
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                                DashboardItemRow(dailyLog: dailyLog)
+                            }
+                            
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .onDelete(perform: $dailyLogItems.remove)
+                        .listRowSeparator(.hidden)
                     }
-                    .onDelete(perform: $dailyLogItems.remove)
-                    .listRowSeparator(.hidden)
+                    .listStyle(.inset)
+                    .scrollIndicators(.hidden)
+                }else {
+                    VStack {
+                        Spacer()
+                        Text("Add your first log")
+                        Spacer()
+                    }
                 }
-                .listStyle(.inset)
 
                 Spacer()
             }
+            .navigationBarBackButtonHidden(true)
         }
         .navigationTitle("Dashboard")
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarBackButtonHidden()
         .sheet(isPresented: $showingBottomSheet) {
             VStack {
                 chartView
@@ -57,9 +70,12 @@ struct DashBoardView: View {
         RoundedButton(systemImageName: "plus", buttonAction: {
             if (dailyLogItems.count == 0) {
                 $dailyLogItems.append(DailyLogItem())
+                self.isAddButtonAnimating = false
+                print(isAddButtonAnimating)
             } else {
                 let logItem =  dailyLogItems[0].copy()
                 $dailyLogItems.append(logItem as! DailyLogItem)
+                self.isAddButtonAnimating = false
             }
         })
     }
@@ -69,7 +85,7 @@ struct DashBoardView: View {
             showingBottomSheet.toggle()
         })
     }
-
+    
     var totalPointsText: some View {
         Text((dailyLogItems.count > 0) ? "All time points: \(dailyLogItems[0].historicalTotal)" : "Get your first points!")
             .font(.headline)
@@ -82,7 +98,7 @@ struct DashBoardView: View {
             .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
         
     }
-
+    
     var chartView: some View {
         VStack {
             Chart {
@@ -95,7 +111,7 @@ struct DashBoardView: View {
             }
             .frame(height: 200)
             .padding()
-            .background(Color.white)
+//            .background(Color.white)
             .cornerRadius(20)
             .shadow(color: Color.gray.opacity(0.4), radius: 10, x: 0, y: 5)
             .overlay(
@@ -112,7 +128,8 @@ struct DashBoardView: View {
         }
         .padding(.horizontal)
     }
-    
+
+
     var modalView:  some View {
         ZStack {
             chartView

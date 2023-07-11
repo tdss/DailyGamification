@@ -13,7 +13,6 @@ struct DashboardItemRow: View {
     @ObservedRealmObject var dailyLog: DailyLogItem
     
     var body: some View {
-//        NavigationLink(destination: DailyLogView(dailyLog: dailyLog)) {
             HStack {
                 VStack(alignment: .leading) {
                     HStack {
@@ -47,8 +46,6 @@ struct DashboardItemRow: View {
             )
             .cornerRadius(10)
             .shadow(radius: 10)
-//        }
-//        .buttonStyle(PlainButtonStyle())
     }
 }
 

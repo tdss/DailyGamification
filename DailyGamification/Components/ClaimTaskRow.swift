@@ -50,7 +50,7 @@ struct ClaimTaskRow: View {
                 }
             }
             .padding()
-            .background(Color.black.opacity(0.05))
+            .overlay(RoundedRectangle(cornerRadius: 15).stroke( LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .leading, endPoint: .trailing), lineWidth: 4))
             .cornerRadius(15)
         }
         .padding(.horizontal)

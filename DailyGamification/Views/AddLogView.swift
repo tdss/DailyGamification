@@ -20,6 +20,7 @@ struct AddLogView: View {
     
     @State private var name = ""
     @State private var multiplier = 1.0
+    @State private var toast: Toast? = nil
     
     @Environment(\.dismiss) private var dismiss
     
@@ -39,7 +40,7 @@ struct AddLogView: View {
                         .font(.headline)
                         .foregroundColor(.white)
                     
-                    TextField("E.g., Push-ups", text: $name)
+                    TextField("", text: $name, prompt: Text("E.g., Push-ups").foregroundColor(.gray))
                         .padding()
                         .background(Color.white.opacity(0.5))
                         .cornerRadius(10)
@@ -62,8 +63,12 @@ struct AddLogView: View {
                 }
                 
                 Button(action: {
-                    saveAction(name, Int(multiplier), dailyLogItem)
-                    dismiss()
+                    if(name.isEmpty) {
+                        toast = Toast(type: .error, title: "Missing name", message: "Provide name for your achievement")
+                    }else {
+                        saveAction(name, Int(multiplier), dailyLogItem)
+                        dismiss()
+                    }
                 }) {
                     Text("SAVE")
                         .frame(maxWidth: .infinity)
@@ -75,6 +80,7 @@ struct AddLogView: View {
                         .cornerRadius(10)
                 }
             }
+            .toastView(toast: $toast)
             .padding(.horizontal, 20)
         }
     }

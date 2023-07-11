@@ -8,41 +8,36 @@
 import SwiftUI
 
 struct TabAppView: View {
-    @State private var selectedTab: TabItem = .dashboard
-    
-    init() {
-        UITabBar.appearance().isHidden = true
-    }
-    
-    private var tabView: some View {
-        switch selectedTab {
-        case .dashboard:
-            return AnyView(DashBoardView())
-        case .blog:
-            return AnyView(BlogView())
-        case .aboutApp:
-            return AnyView(AboutAppView())
-        }
-    }
+//    @State private var selectedTab: TabItem = .dashboard
+//
+//    init() {
+//        UITabBar.appearance().isHidden = true
+//    }
     
     var body: some View {
-            ZStack {
-                VStack {
-                    TabView(selection: $selectedTab) {
-                        ForEach(TabItem.allCases, id: \.rawValue) { tab in
-                            HStack {
-                                tabView
-                            }
-                            .tag(tab)
-                        }
-                    }
-                    .navigationBarBackButtonHidden(true)
+        TabView {
+            DashBoardView()
+                .tabItem {
+                    Image("dashboardIcon")
+                        .renderingMode(.template)
+                        .resizable()
                 }
-                VStack {
-                    Spacer()
-                    CustomTabBar(selectedTab: $selectedTab)
+            BlogView(blogArticlesItems: blogArticlesItems)
+                .tabItem {
+                    Image("blogIcon")
+                        .renderingMode(.template)
+                        .resizable()
                 }
-            }
+            AboutAppView()
+                .tabItem {
+                    Image("aboutAppIcon")
+                        .renderingMode(.template)
+                        .resizable()
+                }
+        }
+        .navigationBarBackButtonHidden()
+        .navigationBarTitleDisplayMode(.inline)
+        .accentColor(.orange)
     }
 }
 
