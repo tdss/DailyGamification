@@ -9,68 +9,110 @@ import SwiftUI
 import RealmSwift
 
 struct DailyLogView: View {
+    @Environment(\.colorScheme) var colorScheme
     @ObservedRealmObject var dailyLog: DailyLogItem
     @State private var isNumericPresented: Bool = false
     @State private var isCheckboxPresented: Bool = false
     @State private var selection: String = "💪"
+    @State var showingBottomSheet = false
+    
     let dateFormatter = DateFormatter()
     
     var body: some View {
-        NavigationView {
-            VStack {
-                header
-                logSelection
+        VStack {
+            header
+            logSelection
+            HStack {
+                Button(action: {
+                    isNumericPresented = true
+                    showingBottomSheet = true
+                    
+                }) {
+                    Text("Add Counter")
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 10)
+                        .background(Capsule().fill(Color.blue))
+                        .foregroundColor(.white)
+                        .shadow(radius: 5)
+                }
+                .buttonStyle(PlainButtonStyle())
+                
+                Button(action: {
+                    isCheckboxPresented = true
+                    showingBottomSheet = true
+                }) {
+                    Text("Add Check")
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 10)
+                        .background(Capsule().fill(Color.green))
+                        .foregroundColor(.white)
+                        .shadow(radius: 5)
+                }
+                .buttonStyle(PlainButtonStyle())
+            }
+            .padding()
+            
+            
+            
+            if(dailyLog.numericLogs.count >= 1 || dailyLog.checkboxLogs.count >= 1) {
                 List {
                     ForEach(dailyLog.numericLogs) { numericLog in
                         NumericLogRow(numericLog: numericLog)
                             .listRowInsets(EdgeInsets())
-                            .padding(.vertical, 8) // Add vertical padding
+                            .padding(.vertical, 8)
                     }
                     .onDelete(perform: $dailyLog.numericLogs.remove)
                     .listRowSeparator(.hidden)
-
+                    
                     ForEach(dailyLog.checkboxLogs) { checkboxLog in
                         ClaimTaskRow(checkboxLog: checkboxLog)
                             .listRowInsets(EdgeInsets())
-                            .padding(.vertical, 8) // Add vertical padding
+                            .padding(.vertical, 8)
                     }
                     .onDelete(perform: $dailyLog.checkboxLogs.remove)
                     .listRowSeparator(.hidden)
                 }
+                .scrollIndicators(.hidden)
                 .listStyle(.inset)
-                .background(Color.white) // Set the background color to white
-
-
-                
+                .background(Color.white)
+            }else {
+                VStack {
+                    Spacer()
+                    Text("Add your logs")
+                    Spacer()
+                }
             }
-            .sheet(isPresented: $isNumericPresented, content: {
-                AddNumericLogView(dailyLogItem: dailyLog)
-            })
-            .sheet(isPresented: $isCheckboxPresented, content: {
-                AddCheckboxLogView(dailyLogItem: dailyLog)
-            })
-            //            .toolbar {
-            //                ToolbarItem(placement: .navigationBarTrailing) {
-            //                    Button {
-            //                        isNumericPresented = true
-            //                        //AddNumericLogView(dailyLogItem: dailyLog)
-            //                        //$dailyLog.numericLogs.append(NumericLog())
-            //                    } label: {
-            //                        Text("add counter")
-            //                    }
-            //                }
-            //                ToolbarItem(placement: .navigationBarLeading) {
-            //                    Button {
-            //                        isCheckboxPresented = true
-            //                        //AddNumericLogView(dailyLogItem: dailyLog)
-            //                        //$dailyLog.numericLogs.append(NumericLog())
-            //                    } label: {
-            //                        Text("add check")
-            //                    }
-            //                }
-            //            }
-            //            .navigationBarTitle(
-            //                (dailyLog.dailyTotal > 0) ? "DailyTotal : \(dailyLog.dailyTotal)" : "Get started!")
+        }
+        .sheet(isPresented: $showingBottomSheet) {
+            if(isNumericPresented) {
+                AddLogView(dailyLogItem: dailyLog, achievementType: .numeric) { name, multiplier, dailyLogItem in
+                    let numericLog = NumericLog()
+                    numericLog.name = name
+                    numericLog.multiplier = multiplier
+                    if let newItem = dailyLogItem.thaw(),
+                       let realm = newItem.realm
+                    {
+                        try? realm.write {
+                            newItem.numericLogs.append(numericLog)
+                        }
+                    }
+                }
+                .presentationDetents([.height(500), .large])
+            }else {
+                AddLogView(dailyLogItem: dailyLog, achievementType: .checkbox) { name, multiplier, dailyLogItem in
+                    let checkboxLog = CheckboxLog()
+                    checkboxLog.name = name
+                    checkboxLog.multiplier = multiplier
+                    if let newItem = dailyLogItem.thaw(),
+                       let realm = newItem.realm
+                    {
+                        try? realm.write {
+                            newItem.checkboxLogs.append(checkboxLog)
+                        }
+                    }
+                }
+                .presentationDetents([.height(500), .large])
+            }
             
         }
     }
@@ -80,21 +122,24 @@ struct DailyLogView: View {
             Text((dailyLog.dailyTotal > 0) ? "DailyTotal : \(dailyLog.dailyTotal)" : "Get started!")
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .foregroundColor(dailyLog.dailyTotal > 0 ? Color.purple : Color.purple)
+                .foregroundColor(colorScheme == .dark ? Color.white : Color.purple)
                 .padding(.bottom, 10)
             
             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean auctor ex libero, eu pulvinar massa.")
                 .font(.body)
-                .foregroundColor(.gray)
+                .foregroundColor(colorScheme == .dark ? Color.white : Color.gray)
                 .padding(.bottom, 10)
             
             Text("For: \(shortDate(date: dailyLog.date))")
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .font(.footnote)
-                .foregroundColor(.gray)
+                .foregroundColor(colorScheme == .dark ? Color.white : Color.gray)
         }
         .padding()
-        .background(Color.white)
+        .background(  colorScheme == .dark ?
+                      LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .leading, endPoint: .trailing) :
+                      LinearGradient(gradient: Gradient(colors: [Color.white, Color.white]), startPoint: .leading, endPoint: .trailing))
+        .shadow(color: .gray.opacity(0.2), radius: 5, x: 0, y: 2)
     }
     
     var logSelection: some View {
@@ -105,10 +150,14 @@ struct DailyLogView: View {
                 .foregroundColor(.black)
                 .padding(.bottom, 10)
             
-            TextField("Your log", text: $dailyLog.textLog)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+            TextField("", text: $dailyLog.textLog, prompt: Text("Your log").foregroundColor(.gray))
+                .padding(5)
+                .background(.white)
+                .foregroundColor(.black)
+
             /**TODO: implement */
+            Spacer()
+                .frame(height: 20)
             Picker(
                 selection: $selection,
                 label: Text("Picker"),

@@ -12,14 +12,7 @@ struct ContentView: View {
     @ObservedRealmObject var gamification: GamificationDiary
 
     var body: some View {
-        NavigationView {
-            VStack {
-                NavigationLink(destination: DashBoardView()) {
-                    Text("OPEN DASHBOARD")
-                }
-            }
-            .padding()
-        }
+       TabAppView()
     }
 }
 

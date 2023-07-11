@@ -7,17 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0211F00B2A5C177400EE20A2 /* BlogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211F00A2A5C177400EE20A2 /* BlogModel.swift */; };
+		0211F00E2A5C185F00EE20A2 /* BlogArticleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211F00D2A5C185F00EE20A2 /* BlogArticleItem.swift */; };
+		0211F0102A5C3FEF00EE20A2 /* BlogArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211F00F2A5C3FEF00EE20A2 /* BlogArticle.swift */; };
+		0211F0122A5D3B3500EE20A2 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211F0112A5D3B3500EE20A2 /* Toast.swift */; };
+		0211F0142A5D46DD00EE20A2 /* BlogArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0211F0132A5D46DD00EE20A2 /* BlogArticleDetail.swift */; };
 		021BD83A2A54437800761E28 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021BD8392A54437800761E28 /* WelcomeView.swift */; };
 		021BD83D2A5444AB00761E28 /* DashboardItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021BD83C2A5444AB00761E28 /* DashboardItemRow.swift */; };
 		021BD8402A54970700761E28 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 021BD83F2A54970700761E28 /* Lottie */; };
 		021BD8422A56D1C000761E28 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021BD8412A56D1C000761E28 /* RoundedButton.swift */; };
+		021BD8442A57E8D000761E28 /* AddLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021BD8432A57E8D000761E28 /* AddLogView.swift */; };
+		021E83B72A57EE80005178B8 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E83B62A57EE80005178B8 /* LottieView.swift */; };
+		021E83BA2A57F5A0005178B8 /* up.json in Resources */ = {isa = PBXBuildFile; fileRef = 021E83B92A57F59F005178B8 /* up.json */; };
+		021E83BC2A57F5CF005178B8 /* LottieFilesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E83BB2A57F5CF005178B8 /* LottieFilesConstants.swift */; };
+		021E83BE2A5808D3005178B8 /* TabAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E83BD2A5808D3005178B8 /* TabAppView.swift */; };
+		021E83C02A580A57005178B8 /* BlogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E83BF2A580A57005178B8 /* BlogView.swift */; };
+		021E83C22A580A63005178B8 /* AboutAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E83C12A580A63005178B8 /* AboutAppView.swift */; };
+		021E83C42A581806005178B8 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E83C32A581806005178B8 /* CustomTabBar.swift */; };
+		0288F0CB2A5D64B100538903 /* RichText in Frameworks */ = {isa = PBXBuildFile; productRef = 0288F0CA2A5D64B100538903 /* RichText */; };
+		0288F0CE2A5D768C00538903 /* AboutUsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288F0CD2A5D768C00538903 /* AboutUsModel.swift */; };
+		0288F0D02A5D769D00538903 /* AboutUsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288F0CF2A5D769D00538903 /* AboutUsResponse.swift */; };
+		0288F0D32A5D78EE00538903 /* EmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288F0D22A5D78EE00538903 /* EmailController.swift */; };
+		0288F0D82A5D86CA00538903 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288F0D72A5D86CA00538903 /* AboutUsView.swift */; };
 		3B0867D92A4CADA300ABF9CA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867D82A4CADA300ABF9CA /* Realm */; };
 		3B0867DB2A4CADA300ABF9CA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867DA2A4CADA300ABF9CA /* RealmSwift */; };
 		3B0867DE2A4CAE2F00ABF9CA /* DailyLogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */; };
 		3B0867E02A4D991700ABF9CA /* DailyLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0867DF2A4D991700ABF9CA /* DailyLogView.swift */; };
-		3B0867E22A4DBFB400ABF9CA /* AddNumericLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0867E12A4DBFB400ABF9CA /* AddNumericLogView.swift */; };
 		3B86FE3C2A4F28CD007F8CFE /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 3B86FE3B2A4F28CD007F8CFE /* Documentation.docc */; };
-		3B9A3E362A4F824C00071C67 /* AddCheckboxLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A3E352A4F824C00071C67 /* AddCheckboxLogView.swift */; };
 		3B9A3E382A501A2700071C67 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A3E372A501A2700071C67 /* Helpers.swift */; };
 		3BB1343D2A4B85CC0048A310 /* DailyGamificationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1343C2A4B85CC0048A310 /* DailyGamificationApp.swift */; };
 		3BB1343F2A4B85CC0048A310 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1343E2A4B85CC0048A310 /* ContentView.swift */; };
@@ -50,14 +66,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0211F00A2A5C177400EE20A2 /* BlogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogModel.swift; sourceTree = "<group>"; };
+		0211F00D2A5C185F00EE20A2 /* BlogArticleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogArticleItem.swift; sourceTree = "<group>"; };
+		0211F00F2A5C3FEF00EE20A2 /* BlogArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogArticle.swift; sourceTree = "<group>"; };
+		0211F0112A5D3B3500EE20A2 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		0211F0132A5D46DD00EE20A2 /* BlogArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogArticleDetail.swift; sourceTree = "<group>"; };
 		021BD8392A54437800761E28 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		021BD83C2A5444AB00761E28 /* DashboardItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardItemRow.swift; sourceTree = "<group>"; };
 		021BD8412A56D1C000761E28 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		021BD8432A57E8D000761E28 /* AddLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogView.swift; sourceTree = "<group>"; };
+		021E83B62A57EE80005178B8 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		021E83B92A57F59F005178B8 /* up.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = up.json; sourceTree = "<group>"; };
+		021E83BB2A57F5CF005178B8 /* LottieFilesConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieFilesConstants.swift; sourceTree = "<group>"; };
+		021E83BD2A5808D3005178B8 /* TabAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabAppView.swift; sourceTree = "<group>"; };
+		021E83BF2A580A57005178B8 /* BlogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogView.swift; sourceTree = "<group>"; };
+		021E83C12A580A63005178B8 /* AboutAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppView.swift; sourceTree = "<group>"; };
+		021E83C32A581806005178B8 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		0288F0CD2A5D768C00538903 /* AboutUsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsModel.swift; sourceTree = "<group>"; };
+		0288F0CF2A5D769D00538903 /* AboutUsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsResponse.swift; sourceTree = "<group>"; };
+		0288F0D22A5D78EE00538903 /* EmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailController.swift; sourceTree = "<group>"; };
+		0288F0D72A5D86CA00538903 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 		3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogItem.swift; sourceTree = "<group>"; };
 		3B0867DF2A4D991700ABF9CA /* DailyLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogView.swift; sourceTree = "<group>"; };
-		3B0867E12A4DBFB400ABF9CA /* AddNumericLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNumericLogView.swift; sourceTree = "<group>"; };
 		3B86FE3B2A4F28CD007F8CFE /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
-		3B9A3E352A4F824C00071C67 /* AddCheckboxLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCheckboxLogView.swift; sourceTree = "<group>"; };
 		3B9A3E372A501A2700071C67 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		3BB134392A4B85CC0048A310 /* DailyGamification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyGamification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB1343C2A4B85CC0048A310 /* DailyGamificationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGamificationApp.swift; sourceTree = "<group>"; };
@@ -83,6 +114,7 @@
 				3B0867DB2A4CADA300ABF9CA /* RealmSwift in Frameworks */,
 				3B0867D92A4CADA300ABF9CA /* Realm in Frameworks */,
 				021BD8402A54970700761E28 /* Lottie in Frameworks */,
+				0288F0CB2A5D64B100538903 /* RichText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,12 +135,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0211F00C2A5C177800EE20A2 /* BlogModel */ = {
+			isa = PBXGroup;
+			children = (
+				0211F00A2A5C177400EE20A2 /* BlogModel.swift */,
+				0211F00D2A5C185F00EE20A2 /* BlogArticleItem.swift */,
+			);
+			path = BlogModel;
+			sourceTree = "<group>";
+		};
 		021BD8382A54436600761E28 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				3B0867DF2A4D991700ABF9CA /* DailyLogView.swift */,
 				3BB134662A4B867B0048A310 /* DashBoardView.swift */,
 				021BD8392A54437800761E28 /* WelcomeView.swift */,
+				021BD8432A57E8D000761E28 /* AddLogView.swift */,
+				021E83B62A57EE80005178B8 /* LottieView.swift */,
+				021E83BD2A5808D3005178B8 /* TabAppView.swift */,
+				021E83BF2A580A57005178B8 /* BlogView.swift */,
+				021E83C12A580A63005178B8 /* AboutAppView.swift */,
+				0211F0132A5D46DD00EE20A2 /* BlogArticleDetail.swift */,
+				0288F0D72A5D86CA00538903 /* AboutUsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,13 +168,44 @@
 				021BD83C2A5444AB00761E28 /* DashboardItemRow.swift */,
 				3BDED7342A4B916A00117ED8 /* ClaimTaskRow.swift */,
 				021BD8412A56D1C000761E28 /* RoundedButton.swift */,
+				021E83C32A581806005178B8 /* CustomTabBar.swift */,
+				0211F00F2A5C3FEF00EE20A2 /* BlogArticle.swift */,
+				0211F0112A5D3B3500EE20A2 /* Toast.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		021E83B82A57F590005178B8 /* LottieFiles */ = {
+			isa = PBXGroup;
+			children = (
+				021E83B92A57F59F005178B8 /* up.json */,
+				021E83BB2A57F5CF005178B8 /* LottieFilesConstants.swift */,
+			);
+			path = LottieFiles;
+			sourceTree = "<group>";
+		};
+		0288F0CC2A5D767200538903 /* AboutUsModel */ = {
+			isa = PBXGroup;
+			children = (
+				0288F0CD2A5D768C00538903 /* AboutUsModel.swift */,
+				0288F0CF2A5D769D00538903 /* AboutUsResponse.swift */,
+			);
+			path = AboutUsModel;
+			sourceTree = "<group>";
+		};
+		0288F0D12A5D78DC00538903 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0288F0D22A5D78EE00538903 /* EmailController.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		3B0867DC2A4CADAC00ABF9CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0288F0CC2A5D767200538903 /* AboutUsModel */,
+				0211F00C2A5C177800EE20A2 /* BlogModel */,
 				3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */,
 			);
 			path = Models;
@@ -156,6 +235,8 @@
 		3BB1343B2A4B85CC0048A310 /* DailyGamification */ = {
 			isa = PBXGroup;
 			children = (
+				0288F0D12A5D78DC00538903 /* Utils */,
+				021E83B82A57F590005178B8 /* LottieFiles */,
 				021BD83B2A54449900761E28 /* Components */,
 				3B0867DC2A4CADAC00ABF9CA /* Models */,
 				021BD8382A54436600761E28 /* Views */,
@@ -165,8 +246,6 @@
 				3BB134422A4B85CD0048A310 /* Preview Content */,
 				3BFE8C852A51724800B97ECE /* TADA.swift */,
 				3B9A3E372A501A2700071C67 /* Helpers.swift */,
-				3B0867E12A4DBFB400ABF9CA /* AddNumericLogView.swift */,
-				3B9A3E352A4F824C00071C67 /* AddCheckboxLogView.swift */,
 			);
 			path = DailyGamification;
 			sourceTree = "<group>";
@@ -216,6 +295,7 @@
 				3B0867D82A4CADA300ABF9CA /* Realm */,
 				3B0867DA2A4CADA300ABF9CA /* RealmSwift */,
 				021BD83F2A54970700761E28 /* Lottie */,
+				0288F0CA2A5D64B100538903 /* RichText */,
 			);
 			productName = DailyGamification;
 			productReference = 3BB134392A4B85CC0048A310 /* DailyGamification.app */;
@@ -292,6 +372,7 @@
 			packageReferences = (
 				3B0867D72A4CADA200ABF9CA /* XCRemoteSwiftPackageReference "realm-swift" */,
 				021BD83E2A54970700761E28 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				0288F0C92A5D64B100538903 /* XCRemoteSwiftPackageReference "RichText" */,
 			);
 			productRefGroup = 3BB1343A2A4B85CC0048A310 /* Products */;
 			projectDirPath = "";
@@ -309,6 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021E83BA2A57F5A0005178B8 /* up.json in Resources */,
 				3BB134442A4B85CD0048A310 /* Preview Assets.xcassets in Resources */,
 				3BB134412A4B85CD0048A310 /* Assets.xcassets in Resources */,
 			);
@@ -336,20 +418,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				021BD83D2A5444AB00761E28 /* DashboardItemRow.swift in Sources */,
+				0211F0122A5D3B3500EE20A2 /* Toast.swift in Sources */,
+				021BD8442A57E8D000761E28 /* AddLogView.swift in Sources */,
+				0211F0102A5C3FEF00EE20A2 /* BlogArticle.swift in Sources */,
+				021E83B72A57EE80005178B8 /* LottieView.swift in Sources */,
+				0211F0142A5D46DD00EE20A2 /* BlogArticleDetail.swift in Sources */,
 				021BD8422A56D1C000761E28 /* RoundedButton.swift in Sources */,
-				3B9A3E362A4F824C00071C67 /* AddCheckboxLogView.swift in Sources */,
 				3B0867E02A4D991700ABF9CA /* DailyLogView.swift in Sources */,
 				3BDED7352A4B916A00117ED8 /* ClaimTaskRow.swift in Sources */,
+				021E83BC2A57F5CF005178B8 /* LottieFilesConstants.swift in Sources */,
 				3BFE8C862A51724800B97ECE /* TADA.swift in Sources */,
+				021E83C22A580A63005178B8 /* AboutAppView.swift in Sources */,
 				3B0867DE2A4CAE2F00ABF9CA /* DailyLogItem.swift in Sources */,
+				0288F0D02A5D769D00538903 /* AboutUsResponse.swift in Sources */,
 				3B9A3E382A501A2700071C67 /* Helpers.swift in Sources */,
-				3B0867E22A4DBFB400ABF9CA /* AddNumericLogView.swift in Sources */,
 				021BD83A2A54437800761E28 /* WelcomeView.swift in Sources */,
+				0288F0D32A5D78EE00538903 /* EmailController.swift in Sources */,
 				3B86FE3C2A4F28CD007F8CFE /* Documentation.docc in Sources */,
 				3BB134692A4B89430048A310 /* NumericLogRow.swift in Sources */,
 				3BB134672A4B867B0048A310 /* DashBoardView.swift in Sources */,
 				3BB1343F2A4B85CC0048A310 /* ContentView.swift in Sources */,
+				0288F0CE2A5D768C00538903 /* AboutUsModel.swift in Sources */,
+				0211F00B2A5C177400EE20A2 /* BlogModel.swift in Sources */,
+				021E83C42A581806005178B8 /* CustomTabBar.swift in Sources */,
+				0288F0D82A5D86CA00538903 /* AboutUsView.swift in Sources */,
+				021E83BE2A5808D3005178B8 /* TabAppView.swift in Sources */,
+				021E83C02A580A57005178B8 /* BlogView.swift in Sources */,
 				3BB1343D2A4B85CC0048A310 /* DailyGamificationApp.swift in Sources */,
+				0211F00E2A5C185F00EE20A2 /* BlogArticleItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +776,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		0288F0C92A5D64B100538903 /* XCRemoteSwiftPackageReference "RichText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NuPlay/RichText.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		3B0867D72A4CADA200ABF9CA /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -695,6 +799,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 021BD83E2A54970700761E28 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		0288F0CA2A5D64B100538903 /* RichText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0288F0C92A5D64B100538903 /* XCRemoteSwiftPackageReference "RichText" */;
+			productName = RichText;
 		};
 		3B0867D82A4CADA300ABF9CA /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;

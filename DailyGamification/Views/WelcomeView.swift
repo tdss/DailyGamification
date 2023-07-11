@@ -28,14 +28,19 @@ struct WelcomeView: View {
 
             Spacer()
 
-            Image("welcomeImage")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding(.horizontal)
+//            Image("welcomeImage")
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .padding(.horizontal)
+//
+            LottieView(name: LottieFilesConstants.up, loopMode: .loop, animationSpeed: 0.5)
+                .frame(width: 300, height: 300)
+            
+
 
             Spacer()
 
-            NavigationLink(destination: DashBoardView()) {
+            NavigationLink(destination: TabAppView()) {
                 Text("Get Started")
                     .font(.title2)
                     .fontWeight(.bold)
