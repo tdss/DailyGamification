@@ -13,17 +13,17 @@ struct BlogArticle: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            AsyncImage(url: URL(string: blogArticleItem.image)) { image in
-                image
-                    .resizable()
-                    .frame(height: 250)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .shadow(color: .gray, radius: 2, x: 0, y: 2)
-            } placeholder: {
-                Color.gray
-            }
-            .frame(height: 250)
-            .padding(.vertical, 6)
+//            AsyncImage(url: URL(string: blogArticleItem.image)) { image in
+//                image
+//                    .resizable()
+//                    .frame(height: 250)
+//                    .clipShape(RoundedRectangle(cornerRadius: 10))
+//                    .shadow(color: .gray, radius: 2, x: 0, y: 2)
+//            } placeholder: {
+//                Color.gray
+//            }
+//            .frame(height: 250)
+//            .padding(.vertical, 6)
 
             HStack(alignment: .center) {
                 Text("\(blogArticleItem.title)")

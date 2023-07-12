@@ -12,6 +12,7 @@ import RealmSwift
 struct DailyGamificationApp: SwiftUI.App {
     @ObservedRealmObject var gamification: GamificationDiary
     
+    
     init() {
         Self.setupRealmConfiguration()
         gamification = Self.loadOrInitiateGamification()
@@ -20,9 +21,8 @@ struct DailyGamificationApp: SwiftUI.App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                WelcomeView()
-            }
+            SplashView()
+            
         }
     }
 }

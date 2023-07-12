@@ -12,7 +12,6 @@ struct NumericLogRow: View {
     @ObservedRealmObject var numericLog: NumericLog
     
     @State private var current = 0
-    @State private var isRewardPresented = false
     @State private var pointsEarned = 0
     
     init(numericLog: NumericLog) {
@@ -28,7 +27,7 @@ struct NumericLogRow: View {
                         Text(String($numericLog.current.wrappedValue))
                             .font(.largeTitle)
                             .fontWeight(.bold)
-                            .foregroundColor(.green)
+                            .foregroundColor(.yellow)
                         Text("(alltime: \(String($numericLog.allTime.wrappedValue)))")
                             .font(.subheadline)
                             .foregroundColor(.gray)
@@ -40,22 +39,21 @@ struct NumericLogRow: View {
                 Spacer()
                 Button(action: updateNumericLog) {
                     Text("+1")
-                        .frame(width: 50, height: 50)
+                        .frame(width: 70, height: 40)
                         .font(.callout)
                         .fontWeight(.bold)
-                        .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), startPoint: .leading, endPoint: .trailing))
-                        .cornerRadius(25)
-                        .foregroundColor(.white)
+                        .background(.white)
+                        .cornerRadius(10)
+                        .foregroundColor(.gray)
+                        .shadow(radius: 5, y: 5)
                 }
             }
             .padding()
-            .overlay(RoundedRectangle(cornerRadius: 15).stroke( LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .leading, endPoint: .trailing), lineWidth: 4))
-            .cornerRadius(15)
         }
+        .background(.white)
+        .cornerRadius(10)
+        .shadow(color: .black.opacity(0.2), radius: 10, y: 10)
         .padding(.horizontal)
-        .sheet(isPresented: $isRewardPresented) {
-            TADA(points: pointsEarned)
-        }
     }
     
     private func updateNumericLog() {
@@ -68,7 +66,6 @@ struct NumericLogRow: View {
                 newItem.dailyLogItem[0].dailyTotal += 1*newItem.multiplier
                 newItem.dailyLogItem[0].historicalTotal += 1*newItem.multiplier
                 pointsEarned = 1*newItem.multiplier
-                isRewardPresented = true
             }
         }
     }

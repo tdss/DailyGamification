@@ -50,7 +50,7 @@ struct BlogView: View {
                 Text("Blog")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .foregroundColor(colorScheme == .dark ? Color.white : Color.purple)
+                    .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                     .padding(.bottom, 10)
                 
                 
@@ -59,15 +59,15 @@ struct BlogView: View {
                     .foregroundColor(colorScheme == .dark ? Color.white : Color.gray)
                     .padding(.bottom, 10)
             }
-            .padding(.leading, 10)
-            .padding(.bottom, 10)
-            
+                    .padding(.leading, 10)
+                    .padding(.bottom, 10)
         }
-        .frame(maxWidth: .infinity)
+//        .frame(maxWidth: .infinity)
+//        .padding(.leading, 10)
+//        .padding(.bottom, 10)
         .background(  colorScheme == .dark ?
-                      LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .leading, endPoint: .trailing) :
-                        LinearGradient(gradient: Gradient(colors: [Color.white, Color.white]), startPoint: .leading, endPoint: .trailing))
-        .shadow(color: .gray.opacity(0.2), radius: 5, x: 0, y: 2)
+            .black : .white)
+//        .shadow(color: .gray.opacity(0.2), radius: 5, x: 0, y: 2)
     }
 }
 
