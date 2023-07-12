@@ -14,8 +14,8 @@ struct BlogView: View {
     var body: some View {
         NavigationView {
             VStack {
-                header
                 List {
+                    header
                     switch blogModel.loadingState {
                     case .loading:
                         Text("loading")
@@ -46,30 +46,22 @@ struct BlogView: View {
     
     var header: some View {
         VStack(alignment: .leading) {
-            VStack(alignment: .leading) {
-                Text("Blog")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-                    .padding(.bottom, 10)
+            Text("Blog")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                .padding(.bottom, 10)
                 
                 
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean auctor ex libero, eu pulvinar massa.")
-                    .font(.body)
-                    .foregroundColor(colorScheme == .dark ? Color.white : Color.gray)
-                    .padding(.bottom, 10)
-            }
-                    .padding(.leading, 10)
-                    .padding(.bottom, 10)
+            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean auctor ex libero, eu pulvinar massa.")
+                .font(.body)
+                .foregroundColor(colorScheme == .dark ? Color.white : Color.gray)
+                .padding(.bottom, 10)
         }
-//        .frame(maxWidth: .infinity)
-//        .padding(.leading, 10)
-//        .padding(.bottom, 10)
-        .background(  colorScheme == .dark ?
-            .black : .white)
-//        .shadow(color: .gray.opacity(0.2), radius: 5, x: 0, y: 2)
+        .background(colorScheme == .dark ? .black : .white)
     }
 }
+
 
 var blogArticlesItems: [BlogArticleItem] = [
     BlogArticleItem(
