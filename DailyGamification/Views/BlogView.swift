@@ -16,6 +16,7 @@ struct BlogView: View {
             VStack {
                 List {
                     header
+                        .listRowSeparator(.hidden)
                     switch blogModel.loadingState {
                     case .loading:
                         Text("loading")
