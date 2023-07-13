@@ -33,7 +33,7 @@ struct AboutAppView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
             if(aboutUsModel.aboutUs.isEmpty == false ) {
-                NavigationLink(destination: AboutUsView(aboutUsItem: aboutUsModel.aboutUs[0])) {
+                NavigationLink(destination: AboutUsView()) {
                     Text("About us")
                 }
             }

@@ -18,7 +18,7 @@ struct ClaimTaskRow: View {
                     Text("+\(String(checkboxLog.multiplier))")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                        .foregroundColor(.green)
+                        .foregroundColor(.yellow)
                     Text(checkboxLog.name)
                         .font(.title2)
                         .fontWeight(.semibold)
@@ -29,13 +29,13 @@ struct ClaimTaskRow: View {
                 if (!checkboxLog.current) {
                     Button(action: updateCheckboxLog) {
                         Text("CLAIM")
+                            .frame(width: 70, height: 40)
                             .font(.callout)
                             .fontWeight(.bold)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 5)
-                            .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), startPoint: .leading, endPoint: .trailing))
-                            .cornerRadius(15)
+                            .background(.green)
+                            .cornerRadius(10)
                             .foregroundColor(.white)
+                            .shadow(radius: 5)
                     }
                 } else {
                     VStack {
@@ -50,12 +50,13 @@ struct ClaimTaskRow: View {
                 }
             }
             .padding()
-            .overlay(RoundedRectangle(cornerRadius: 15).stroke( LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .leading, endPoint: .trailing), lineWidth: 4))
-            .cornerRadius(15)
         }
+        .background(.white)
+        .cornerRadius(10)
+        .shadow(color: .black.opacity(0.2), radius: 10, y: 10)
         .padding(.horizontal)
     }
-
+    
     
     private func updateCheckboxLog() {
         if let newItem = checkboxLog.thaw(),

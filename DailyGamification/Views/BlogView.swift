@@ -14,8 +14,9 @@ struct BlogView: View {
     var body: some View {
         NavigationView {
             VStack {
-                header
                 List {
+                    header
+                        .listRowSeparator(.hidden)
                     switch blogModel.loadingState {
                     case .loading:
                         Text("loading")
@@ -46,30 +47,22 @@ struct BlogView: View {
     
     var header: some View {
         VStack(alignment: .leading) {
-            VStack(alignment: .leading) {
-                Text("Blog")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(colorScheme == .dark ? Color.white : Color.purple)
-                    .padding(.bottom, 10)
+            Text("Blog")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                .padding(.bottom, 10)
                 
                 
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean auctor ex libero, eu pulvinar massa.")
-                    .font(.body)
-                    .foregroundColor(colorScheme == .dark ? Color.white : Color.gray)
-                    .padding(.bottom, 10)
-            }
-            .padding(.leading, 10)
-            .padding(.bottom, 10)
-            
+            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean auctor ex libero, eu pulvinar massa.")
+                .font(.body)
+                .foregroundColor(colorScheme == .dark ? Color.white : Color.gray)
+                .padding(.bottom, 10)
         }
-        .frame(maxWidth: .infinity)
-        .background(  colorScheme == .dark ?
-                      LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .leading, endPoint: .trailing) :
-                        LinearGradient(gradient: Gradient(colors: [Color.white, Color.white]), startPoint: .leading, endPoint: .trailing))
-        .shadow(color: .gray.opacity(0.2), radius: 5, x: 0, y: 2)
+        .background(colorScheme == .dark ? .black : .white)
     }
 }
+
 
 var blogArticlesItems: [BlogArticleItem] = [
     BlogArticleItem(

@@ -13,16 +13,18 @@ struct DashboardItemRow: View {
     @ObservedRealmObject var dailyLog: DailyLogItem
     
     var body: some View {
-            HStack {
-                VStack(alignment: .leading) {
-                    HStack {
+        HStack {
+            VStack(alignment: .leading) {
+                HStack(alignment: .center) {
+                    HStack(alignment: .center) {
                         Image(systemName: "calendar")
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                         Text("\(shortDate(date: dailyLog.date))")
                             .font(.headline)
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                     }
-                    HStack {
+                    Spacer()
+                    HStack(alignment: .center) {
                         Image(systemName: "star.fill")
                             .foregroundColor(.yellow)
                         Text("\(dailyLog.dailyTotal)xp")
@@ -30,22 +32,28 @@ struct DashboardItemRow: View {
                             .fontWeight(.bold)
                             .foregroundColor(.yellow)
                     }
-                    HStack {
-                        Image(systemName: "text.bubble")
-                            .foregroundColor(.white)
-                        Text("\(dailyLog.textLog)")
-                            .font(.subheadline)
-                            .foregroundColor(.white)
-                    }
                 }
                 Spacer()
+                    .frame(height: 5)
+                HStack {
+                    HStack(alignment: .center) {
+                        Image(systemName: "text.bubble")
+                            .foregroundColor(.black)
+                        Text("\(dailyLog.textLog.isEmpty ? "Your Log" : dailyLog.textLog)")
+                            .font(.subheadline)
+                            .foregroundColor(.black)
+                    }
+                    Spacer()
+                    Image(systemName: "arrow.forward")
+                        .foregroundColor(.gray)
+                }
             }
-            .padding()
-            .background(
-                LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .leading, endPoint: .trailing)
-            )
-            .cornerRadius(10)
-            .shadow(radius: 10)
+            Spacer()
+        }
+        .padding()
+        .background(.white)
+        .cornerRadius(10)
+        .shadow(color: .black.opacity(0.2), radius: 10, y: 10)
     }
 }
 

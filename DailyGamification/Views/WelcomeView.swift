@@ -28,13 +28,14 @@ struct WelcomeView: View {
 
             Spacer()
 
-//            Image("welcomeImage")
-//                .resizable()
-//                .aspectRatio(contentMode: .fit)
-//                .padding(.horizontal)
-//
-            LottieView(name: LottieFilesConstants.up, loopMode: .loop, animationSpeed: 0.5)
-                .frame(width: 300, height: 300)
+            Image("WelcomeScreenGraphic")
+                .resizable()
+                .frame(width: 200, height: 200)
+                .aspectRatio(contentMode: .fit)
+                .padding(.horizontal)
+
+//            LottieView(name: LottieFilesConstants.up, loopMode: .loop, animationSpeed: 0.5)
+//                .frame(width: 300, height: 300)
             
 
 
@@ -47,7 +48,7 @@ struct WelcomeView: View {
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .padding()
                     .foregroundColor(.white)
-                    .background(Color.blue)
+                    .background(Color("Primary"))
                     .cornerRadius(40)
             }
             .padding(.horizontal)

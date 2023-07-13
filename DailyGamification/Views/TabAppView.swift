@@ -8,12 +8,7 @@
 import SwiftUI
 
 struct TabAppView: View {
-//    @State private var selectedTab: TabItem = .dashboard
-//
-//    init() {
-//        UITabBar.appearance().isHidden = true
-//    }
-    
+    @StateObject var aboutUsModel: AboutUsModel = AboutUsModel()
     var body: some View {
         TabView {
             DashBoardView()
@@ -28,7 +23,7 @@ struct TabAppView: View {
                         .renderingMode(.template)
                         .resizable()
                 }
-            AboutAppView()
+            AboutUsView()
                 .tabItem {
                     Image("aboutAppIcon")
                         .renderingMode(.template)
@@ -37,7 +32,7 @@ struct TabAppView: View {
         }
         .navigationBarBackButtonHidden()
         .navigationBarTitleDisplayMode(.inline)
-        .accentColor(.orange)
+        .accentColor(Color("Primary"))
     }
 }
 

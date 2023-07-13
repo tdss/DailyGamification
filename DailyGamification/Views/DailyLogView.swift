@@ -22,38 +22,8 @@ struct DailyLogView: View {
         VStack {
             header
             logSelection
-            HStack {
-                Button(action: {
-                    isNumericPresented = true
-                    showingBottomSheet = true
-                    
-                }) {
-                    Text("Add Counter")
-                        .padding(.horizontal, 20)
-                        .padding(.vertical, 10)
-                        .background(Capsule().fill(Color.blue))
-                        .foregroundColor(.white)
-                        .shadow(radius: 5)
-                }
-                .buttonStyle(PlainButtonStyle())
-                
-                Button(action: {
-                    isCheckboxPresented = true
-                    showingBottomSheet = true
-                }) {
-                    Text("Add Check")
-                        .padding(.horizontal, 20)
-                        .padding(.vertical, 10)
-                        .background(Capsule().fill(Color.green))
-                        .foregroundColor(.white)
-                        .shadow(radius: 5)
-                }
-                .buttonStyle(PlainButtonStyle())
-            }
-            .padding()
-            
-            
-            
+            Spacer()
+                .frame(height: 20)
             if(dailyLog.numericLogs.count >= 1 || dailyLog.checkboxLogs.count >= 1) {
                 List {
                     ForEach(dailyLog.numericLogs) { numericLog in
@@ -82,6 +52,46 @@ struct DailyLogView: View {
                     Spacer()
                 }
             }
+            HStack {
+                Button(action: {
+                    isNumericPresented = true
+                    showingBottomSheet = true
+                    
+                }) {
+                    HStack {
+                        Image(systemName: "arrow.counterclockwise.circle")
+                            .foregroundColor(.white)
+                        Text("Add Counter")
+                            .foregroundColor(.white)
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
+                .background(.purple)
+                .shadow(radius: 5)
+                .cornerRadius(5)
+                
+                Button(action: {
+                    isCheckboxPresented = true
+                    showingBottomSheet = true
+                }) {
+                    HStack {
+                        Image(systemName: "checkmark.circle")
+                            .foregroundColor(.white)
+                        Text("Add Check")
+                            .foregroundColor(.white)
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
+                .background(Color.blue)
+                .cornerRadius(2)
+                .shadow(radius: 5)
+                .cornerRadius(5)
+            }
+            .padding()
         }
         .sheet(isPresented: $showingBottomSheet) {
             if(isNumericPresented) {
@@ -122,7 +132,7 @@ struct DailyLogView: View {
             Text((dailyLog.dailyTotal > 0) ? "DailyTotal : \(dailyLog.dailyTotal)" : "Get started!")
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .foregroundColor(colorScheme == .dark ? Color.white : Color.purple)
+                .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                 .padding(.bottom, 10)
             
             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean auctor ex libero, eu pulvinar massa.")
@@ -137,8 +147,8 @@ struct DailyLogView: View {
         }
         .padding()
         .background(  colorScheme == .dark ?
-                      LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .leading, endPoint: .trailing) :
-                      LinearGradient(gradient: Gradient(colors: [Color.white, Color.white]), startPoint: .leading, endPoint: .trailing))
+            .black : .white
+        )
         .shadow(color: .gray.opacity(0.2), radius: 5, x: 0, y: 2)
     }
     
@@ -151,9 +161,10 @@ struct DailyLogView: View {
                 .padding(.bottom, 10)
             
             TextField("", text: $dailyLog.textLog, prompt: Text("Your log").foregroundColor(.gray))
-                .padding(5)
                 .background(.white)
                 .foregroundColor(.black)
+                .textFieldStyle(.roundedBorder)
+                .cornerRadius(2)
 
             /**TODO: implement */
             Spacer()
@@ -170,10 +181,7 @@ struct DailyLogView: View {
             )
             .pickerStyle(.segmented)
         }
-        .padding()
         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white))
-        .overlay(RoundedRectangle(cornerRadius: 10).stroke( LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .leading, endPoint: .trailing), lineWidth: 4))
-        .shadow(color: .gray.opacity(0.4), radius: 5, x: 0, y: 5)
         .padding([.horizontal, .top])
     }
 }

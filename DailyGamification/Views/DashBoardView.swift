@@ -87,15 +87,22 @@ struct DashBoardView: View {
     }
     
     var totalPointsText: some View {
-        Text((dailyLogItems.count > 0) ? "All time points: \(dailyLogItems[0].historicalTotal)" : "Get your first points!")
-            .font(.headline)
-            .foregroundColor(.white)
-            .frame(width: 200, height: 50)
-            .background(
-                LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .leading, endPoint: .trailing)
-            )
-            .cornerRadius(20)
-            .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
+        HStack {
+            Text((dailyLogItems.count > 0) ? "All time points:" : "Get your first points!")
+                .font(.headline)
+                .foregroundColor(.gray)
+            HStack(spacing: 2) {
+                Text("\(dailyLogItems.isEmpty == false ?  dailyLogItems[0].historicalTotal : 0)")
+                    .font(.headline)
+                    .foregroundColor(.yellow)
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+            }
+        }
+        .frame(width: 220, height: 50)
+        .background(.white)
+        .cornerRadius(20)
+        .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
         
     }
     
@@ -111,7 +118,6 @@ struct DashBoardView: View {
             }
             .frame(height: 200)
             .padding()
-//            .background(Color.white)
             .cornerRadius(20)
             .shadow(color: Color.gray.opacity(0.4), radius: 10, x: 0, y: 5)
             .overlay(

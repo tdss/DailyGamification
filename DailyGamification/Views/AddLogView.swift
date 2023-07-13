@@ -26,9 +26,6 @@ struct AddLogView: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), startPoint: .top, endPoint: .bottom)
-                .edgesIgnoringSafeArea(.all)
-            
             VStack(spacing: 20) {
                 Text("New \(achievementType == .numeric ? "Numeric" : "") Achievement")
                     .font(.largeTitle)
@@ -40,7 +37,7 @@ struct AddLogView: View {
                         .font(.headline)
                         .foregroundColor(.white)
                     
-                    TextField("", text: $name, prompt: Text("E.g., Push-ups").foregroundColor(.gray))
+                    TextField("", text: $name, prompt: Text("E.g., Push-ups").foregroundColor(Color("Primary")))
                         .padding()
                         .background(Color.white.opacity(0.5))
                         .cornerRadius(10)
@@ -74,15 +71,16 @@ struct AddLogView: View {
                         .frame(maxWidth: .infinity)
                         .font(.title)
                         .fontWeight(.bold)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("Primary"))
                         .padding()
-                        .background(Color.green)
+                        .background(.white)
                         .cornerRadius(10)
                 }
             }
             .toastView(toast: $toast)
             .padding(.horizontal, 20)
         }
+        .background(Color("Primary"))
     }
 }
 
