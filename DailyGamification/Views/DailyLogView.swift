@@ -24,106 +24,14 @@ struct DailyLogView: View {
             logSelection
             Spacer()
                 .frame(height: 20)
-            if(dailyLog.numericLogs.count >= 1 || dailyLog.checkboxLogs.count >= 1) {
-                List {
-                    ForEach(dailyLog.numericLogs) { numericLog in
-                        NumericLogRow(numericLog: numericLog)
-                            .listRowInsets(EdgeInsets())
-                            .padding(.vertical, 8)
-                    }
-                    .onDelete(perform: $dailyLog.numericLogs.remove)
-                    .listRowSeparator(.hidden)
-                    
-                    ForEach(dailyLog.checkboxLogs) { checkboxLog in
-                        ClaimTaskRow(checkboxLog: checkboxLog)
-                            .listRowInsets(EdgeInsets())
-                            .padding(.vertical, 8)
-                    }
-                    .onDelete(perform: $dailyLog.checkboxLogs.remove)
-                    .listRowSeparator(.hidden)
-                }
-                .scrollIndicators(.hidden)
-                .listStyle(.inset)
-                .background(Color.white)
-            }else {
-                VStack {
-                    Spacer()
-                    Text("Add your logs")
-                    Spacer()
-                }
-            }
-            HStack {
-                Button(action: {
-                    isNumericPresented = true
-                    showingBottomSheet = true
-                    
-                }) {
-                    HStack {
-                        Image(systemName: "arrow.counterclockwise.circle")
-                            .foregroundColor(.white)
-                        Text("Add Counter")
-                            .foregroundColor(.white)
-                    }
-                }
-                .frame(maxWidth: .infinity)
-                .padding(.horizontal, 20)
-                .padding(.vertical, 10)
-                .background(.purple)
-                .shadow(radius: 5)
-                .cornerRadius(5)
-                
-                Button(action: {
-                    isCheckboxPresented = true
-                    showingBottomSheet = true
-                }) {
-                    HStack {
-                        Image(systemName: "checkmark.circle")
-                            .foregroundColor(.white)
-                        Text("Add Check")
-                            .foregroundColor(.white)
-                    }
-                }
-                .frame(maxWidth: .infinity)
-                .padding(.horizontal, 20)
-                .padding(.vertical, 10)
-                .background(Color.blue)
-                .cornerRadius(2)
-                .shadow(radius: 5)
-                .cornerRadius(5)
-            }
-            .padding()
+            dailyLogsList
+            buttonsTab
         }
-        .sheet(isPresented: $showingBottomSheet) {
-            if(isNumericPresented) {
-                AddLogView(dailyLogItem: dailyLog, achievementType: .numeric) { name, multiplier, dailyLogItem in
-                    let numericLog = NumericLog()
-                    numericLog.name = name
-                    numericLog.multiplier = multiplier
-                    if let newItem = dailyLogItem.thaw(),
-                       let realm = newItem.realm
-                    {
-                        try? realm.write {
-                            newItem.numericLogs.append(numericLog)
-                        }
-                    }
-                }
-                .presentationDetents([.height(500), .large])
-            }else {
-                AddLogView(dailyLogItem: dailyLog, achievementType: .checkbox) { name, multiplier, dailyLogItem in
-                    let checkboxLog = CheckboxLog()
-                    checkboxLog.name = name
-                    checkboxLog.multiplier = multiplier
-                    if let newItem = dailyLogItem.thaw(),
-                       let realm = newItem.realm
-                    {
-                        try? realm.write {
-                            newItem.checkboxLogs.append(checkboxLog)
-                        }
-                    }
-                }
-                .presentationDetents([.height(500), .large])
-            }
-            
+        .sheet(isPresented: $isNumericPresented) {
+           numericBottomSheet
+        }
+        .sheet(isPresented: $isCheckboxPresented) {
+            checkboxBottomSheet
         }
     }
     
@@ -184,11 +92,97 @@ struct DailyLogView: View {
         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white))
         .padding([.horizontal, .top])
     }
+    
+    var dailyLogsList: some View {
+        VStack {
+            if(dailyLog.numericLogs.count >= 1 || dailyLog.checkboxLogs.count >= 1) {
+                List {
+                    ForEach(dailyLog.numericLogs) { numericLog in
+                        NumericLogRow(numericLog: numericLog)
+                            .listRowInsets(EdgeInsets())
+                            .padding(.vertical, 8)
+                    }
+                    .onDelete(perform: $dailyLog.numericLogs.remove)
+                    .listRowSeparator(.hidden)
+                    
+                    ForEach(dailyLog.checkboxLogs) { checkboxLog in
+                        ClaimTaskRow(checkboxLog: checkboxLog)
+                            .listRowInsets(EdgeInsets())
+                            .padding(.vertical, 8)
+                    }
+                    .onDelete(perform: $dailyLog.checkboxLogs.remove)
+                    .listRowSeparator(.hidden)
+                }
+                .scrollIndicators(.hidden)
+                .listStyle(.inset)
+                .background(Color.white)
+            }else {
+                VStack {
+                    Spacer()
+                    Text("Add your logs")
+                    Spacer()
+                }
+            }
+        }
+    }
+    
+    var buttonsTab: some View {
+        HStack {
+            PrimaryButton(
+                title: "Add Counter",
+                imageSystemName:"arrow.counterclockwise.circle",
+                backgroundColor: .purple,
+                buttonAction: {
+                    isNumericPresented = true
+                    showingBottomSheet = true
+                })
+            PrimaryButton(
+                title: "Add Check",
+                imageSystemName:"checkmark.circle",
+                backgroundColor: .blue,
+                buttonAction: {
+                    isCheckboxPresented = true
+                    showingBottomSheet = true
+                })
+        }
+        .padding()
+    }
+    
+    var numericBottomSheet: some View {
+        AddLogView(dailyLogItem: dailyLog, achievementType: .numeric) { name, multiplier, dailyLogItem in
+            let numericLog = NumericLog()
+            numericLog.name = name
+            numericLog.multiplier = multiplier
+            if let newItem = dailyLogItem.thaw(),
+               let realm = newItem.realm
+            {
+                try? realm.write {
+                    newItem.numericLogs.append(numericLog)
+                }
+            }
+        }
+        .presentationDetents([.height(500), .large])
+    }
+    
+    var checkboxBottomSheet: some View {
+        AddLogView(dailyLogItem: dailyLog, achievementType: .checkbox) { name, multiplier, dailyLogItem in
+            let checkboxLog = CheckboxLog()
+            checkboxLog.name = name
+            checkboxLog.multiplier = multiplier
+            if let newItem = dailyLogItem.thaw(),
+               let realm = newItem.realm
+            {
+                try? realm.write {
+                    newItem.checkboxLogs.append(checkboxLog)
+                }
+            }
+        }
+        .presentationDetents([.height(500), .large])
+    }
 }
 
 struct DailyLogView_Previews: PreviewProvider {
     static var previews: some View {
-        
         DailyLogView(dailyLog: GamificationDiary.getSampleToday())
     }
 }

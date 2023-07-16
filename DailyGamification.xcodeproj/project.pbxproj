@@ -30,6 +30,8 @@
 		0288F0D32A5D78EE00538903 /* EmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288F0D22A5D78EE00538903 /* EmailController.swift */; };
 		0288F0D82A5D86CA00538903 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0288F0D72A5D86CA00538903 /* AboutUsView.swift */; };
 		02B6FDBC2A5EDAC200806F7F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B6FDBB2A5EDAC200806F7F /* SplashView.swift */; };
+		02C47F6D2A64473D006D1568 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C47F6C2A64473D006D1568 /* PrimaryButton.swift */; };
+		02C47F6F2A644D6E006D1568 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C47F6E2A644D6E006D1568 /* Loader.swift */; };
 		3B0867D92A4CADA300ABF9CA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867D82A4CADA300ABF9CA /* Realm */; };
 		3B0867DB2A4CADA300ABF9CA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867DA2A4CADA300ABF9CA /* RealmSwift */; };
 		3B0867DE2A4CAE2F00ABF9CA /* DailyLogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */; };
@@ -88,6 +90,8 @@
 		0288F0D22A5D78EE00538903 /* EmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailController.swift; sourceTree = "<group>"; };
 		0288F0D72A5D86CA00538903 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 		02B6FDBB2A5EDAC200806F7F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		02C47F6C2A64473D006D1568 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		02C47F6E2A644D6E006D1568 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogItem.swift; sourceTree = "<group>"; };
 		3B0867DF2A4D991700ABF9CA /* DailyLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLogView.swift; sourceTree = "<group>"; };
 		3B86FE3B2A4F28CD007F8CFE /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				021E83C32A581806005178B8 /* CustomTabBar.swift */,
 				0211F00F2A5C3FEF00EE20A2 /* BlogArticle.swift */,
 				0211F0112A5D3B3500EE20A2 /* Toast.swift */,
+				02C47F6C2A64473D006D1568 /* PrimaryButton.swift */,
+				02C47F6E2A644D6E006D1568 /* Loader.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 				0288F0D02A5D769D00538903 /* AboutUsResponse.swift in Sources */,
 				3B9A3E382A501A2700071C67 /* Helpers.swift in Sources */,
 				021BD83A2A54437800761E28 /* WelcomeView.swift in Sources */,
+				02C47F6D2A64473D006D1568 /* PrimaryButton.swift in Sources */,
 				0288F0D32A5D78EE00538903 /* EmailController.swift in Sources */,
 				02B6FDBC2A5EDAC200806F7F /* SplashView.swift in Sources */,
 				3B86FE3C2A4F28CD007F8CFE /* Documentation.docc in Sources */,
@@ -449,6 +456,7 @@
 				021E83BE2A5808D3005178B8 /* TabAppView.swift in Sources */,
 				021E83C02A580A57005178B8 /* BlogView.swift in Sources */,
 				3BB1343D2A4B85CC0048A310 /* DailyGamificationApp.swift in Sources */,
+				02C47F6F2A644D6E006D1568 /* Loader.swift in Sources */,
 				0211F00E2A5C185F00EE20A2 /* BlogArticleItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
