@@ -54,6 +54,10 @@ struct WelcomeView: View {
             .padding(.horizontal)
             .padding(.bottom, 20)
         }
+        .task {
+             NotificationManager.instance.requestAuthorization()
+            
+        }
     }
 }
 
