@@ -7,12 +7,14 @@
 
 import SwiftUI
 import RealmSwift
+import ConfettiSwiftUI
 
 struct DailyLogView: View {
     @Environment(\.colorScheme) var colorScheme
     @ObservedRealmObject var dailyLog: DailyLogItem
     @State private var isNumericPresented: Bool = false
     @State private var isCheckboxPresented: Bool = false
+    @State var confettiCounter: Int = 0
     
     let dateFormatter = DateFormatter()
     
@@ -25,6 +27,7 @@ struct DailyLogView: View {
             dailyLogsList
             buttonsTab
         }
+        .confettiCannon(counter: $confettiCounter, num: 150, openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 200)
         .sheet(isPresented: $isNumericPresented) {
            numericBottomSheet
         }
@@ -101,7 +104,7 @@ struct DailyLogView: View {
                     .listRowSeparator(.hidden)
                     
                     ForEach(dailyLog.checkboxLogs) { checkboxLog in
-                        ClaimTaskRow(checkboxLog: checkboxLog)
+                        ClaimTaskRow(checkboxLog: checkboxLog, confettiCounter: $confettiCounter)
                             .listRowInsets(EdgeInsets())
                             .padding(.vertical, 8)
                     }

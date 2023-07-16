@@ -33,6 +33,7 @@
 		02C47F6D2A64473D006D1568 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C47F6C2A64473D006D1568 /* PrimaryButton.swift */; };
 		02C47F6F2A644D6E006D1568 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C47F6E2A644D6E006D1568 /* Loader.swift */; };
 		02C47FA92A6463DA006D1568 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C47FA82A6463DA006D1568 /* NotificationManager.swift */; };
+		02C47FAC2A647805006D1568 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 02C47FAB2A647805006D1568 /* ConfettiSwiftUI */; };
 		3B0867D92A4CADA300ABF9CA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867D82A4CADA300ABF9CA /* Realm */; };
 		3B0867DB2A4CADA300ABF9CA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B0867DA2A4CADA300ABF9CA /* RealmSwift */; };
 		3B0867DE2A4CAE2F00ABF9CA /* DailyLogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0867DD2A4CAE2F00ABF9CA /* DailyLogItem.swift */; };
@@ -119,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C47FAC2A647805006D1568 /* ConfettiSwiftUI in Frameworks */,
 				3B0867DB2A4CADA300ABF9CA /* RealmSwift in Frameworks */,
 				3B0867D92A4CADA300ABF9CA /* Realm in Frameworks */,
 				021BD8402A54970700761E28 /* Lottie in Frameworks */,
@@ -308,6 +310,7 @@
 				3B0867DA2A4CADA300ABF9CA /* RealmSwift */,
 				021BD83F2A54970700761E28 /* Lottie */,
 				0288F0CA2A5D64B100538903 /* RichText */,
+				02C47FAB2A647805006D1568 /* ConfettiSwiftUI */,
 			);
 			productName = DailyGamification;
 			productReference = 3BB134392A4B85CC0048A310 /* DailyGamification.app */;
@@ -385,6 +388,7 @@
 				3B0867D72A4CADA200ABF9CA /* XCRemoteSwiftPackageReference "realm-swift" */,
 				021BD83E2A54970700761E28 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				0288F0C92A5D64B100538903 /* XCRemoteSwiftPackageReference "RichText" */,
+				02C47FAA2A647805006D1568 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 			);
 			productRefGroup = 3BB1343A2A4B85CC0048A310 /* Products */;
 			projectDirPath = "";
@@ -800,6 +804,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		02C47FAA2A647805006D1568 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI#-installation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		3B0867D72A4CADA200ABF9CA /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -820,6 +832,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0288F0C92A5D64B100538903 /* XCRemoteSwiftPackageReference "RichText" */;
 			productName = RichText;
+		};
+		02C47FAB2A647805006D1568 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02C47FAA2A647805006D1568 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
 		};
 		3B0867D82A4CADA300ABF9CA /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
