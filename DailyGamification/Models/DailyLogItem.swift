@@ -8,6 +8,7 @@
 import Foundation
 import RealmSwift
 
+let emojis = ["💪", "😩", "😝", "😭"]
 
 class GamificationDiary: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var _id:  ObjectId
@@ -53,6 +54,8 @@ class DailyLogItem: Object, ObjectKeyIdentifiable, NSCopying {
     @Persisted var historicalTotal = 0
     @Persisted var date = Date.now
     @Persisted var textLog = ""
+    @Persisted var emoji = emojis[0]
+    
     
     @Persisted(originProperty: "dailyLogItems") var gamificationDiary: LinkingObjects<GamificationDiary>
     

@@ -39,7 +39,7 @@ struct DashboardItemRow: View {
                     HStack(alignment: .center) {
                         Image(systemName: "text.bubble")
                             .foregroundColor(.black)
-                        Text("\(dailyLog.textLog.isEmpty ? "Your Log" : dailyLog.textLog)")
+                        Text("\(dailyLog.emoji) \(dailyLog.textLog.isEmpty ? "Your Log" : dailyLog.textLog)")
                             .font(.subheadline)
                             .foregroundColor(.black)
                     }

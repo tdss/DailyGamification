@@ -13,8 +13,6 @@ struct DailyLogView: View {
     @ObservedRealmObject var dailyLog: DailyLogItem
     @State private var isNumericPresented: Bool = false
     @State private var isCheckboxPresented: Bool = false
-    @State private var selection: String = "💪"
-    @State var showingBottomSheet = false
     
     let dateFormatter = DateFormatter()
     
@@ -73,18 +71,15 @@ struct DailyLogView: View {
                 .foregroundColor(.black)
                 .textFieldStyle(.roundedBorder)
                 .cornerRadius(2)
-
-            /**TODO: implement */
             Spacer()
                 .frame(height: 20)
             Picker(
-                selection: $selection,
+                selection: $dailyLog.emoji,
                 label: Text("Picker"),
                 content: {
-                    Text("💪").tag("💪")
-                    Text("😩").tag("😩")
-                    Text("😝").tag("😩")
-                    Text("😭").tag("😭")
+                    ForEach(emojis, id: \.self) { emoji in
+                        Text("\(emoji)").tag("\(emoji)")
+                    }
                 }
             )
             .pickerStyle(.segmented)
@@ -134,7 +129,6 @@ struct DailyLogView: View {
                 backgroundColor: .purple,
                 buttonAction: {
                     isNumericPresented = true
-                    showingBottomSheet = true
                 })
             PrimaryButton(
                 title: "Add Check",
@@ -142,7 +136,6 @@ struct DailyLogView: View {
                 backgroundColor: .blue,
                 buttonAction: {
                     isCheckboxPresented = true
-                    showingBottomSheet = true
                 })
         }
         .padding()
