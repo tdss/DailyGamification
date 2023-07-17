@@ -44,12 +44,7 @@ struct DailyLogView: View {
                 .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                 .padding(.bottom, 10)
             
-            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean auctor ex libero, eu pulvinar massa.")
-                .font(.body)
-                .foregroundColor(colorScheme == .dark ? Color.white : Color.gray)
-                .padding(.bottom, 10)
-            
-            Text("For: \(shortDate(date: dailyLog.date))")
+            Text("Todey is: \(shortDate(date: dailyLog.date))")
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .font(.footnote)
                 .foregroundColor(colorScheme == .dark ? Color.white : Color.gray)
