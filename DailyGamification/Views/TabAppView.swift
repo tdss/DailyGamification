@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TabAppView: View {
-    @StateObject var aboutUsModel: AboutUsModel = AboutUsModel()
     var body: some View {
         TabView {
             DashBoardView()

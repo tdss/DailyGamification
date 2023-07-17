@@ -28,40 +28,14 @@ struct DashBoardView: View {
                     totalPointsText
                 }
                 .padding()
-                if(dailyLogItems.count >= 1) {
-                    List {
-                        ForEach(dailyLogItems) { dailyLog in
-                            ZStack {
-                                NavigationLink(destination: DailyLogView(dailyLog: dailyLog)) {
-                                    EmptyView()
-                                }
-                                .buttonStyle(PlainButtonStyle())
-                                DashboardItemRow(dailyLog: dailyLog)
-                            }
-                            
-                        }
-                        .onDelete(perform: $dailyLogItems.remove)
-                        .listRowSeparator(.hidden)
-                    }
-                    .listStyle(.inset)
-                    .scrollIndicators(.hidden)
-                }else {
-                    VStack {
-                        Spacer()
-                        Text("Add your first log")
-                        Spacer()
-                    }
-                }
-
+                dailyLogsList
                 Spacer()
             }
             .navigationBarBackButtonHidden(true)
         }
         .navigationTitle("Dashboard")
         .sheet(isPresented: $showingBottomSheet) {
-            VStack {
                 chartView
-            }
             .presentationDetents([.medium, .large])
         }
     }
@@ -133,6 +107,35 @@ struct DashBoardView: View {
             )
         }
         .padding(.horizontal)
+    }
+    
+    var dailyLogsList: some View {
+        VStack {
+            if(dailyLogItems.count >= 1) {
+                List {
+                    ForEach(dailyLogItems) { dailyLog in
+                        ZStack {
+                            NavigationLink(destination: DailyLogView(dailyLog: dailyLog)) {
+                                EmptyView()
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            DashboardItemRow(dailyLog: dailyLog)
+                        }
+                        
+                    }
+                    .onDelete(perform: $dailyLogItems.remove)
+                    .listRowSeparator(.hidden)
+                }
+                .listStyle(.inset)
+                .scrollIndicators(.hidden)
+            }else {
+                VStack {
+                    Spacer()
+                    Text("Add your first log")
+                    Spacer()
+                }
+            }
+        }
     }
 
 

@@ -17,14 +17,13 @@ struct AboutUsView: View {
                     AsyncImage(url: URL(string: aboutUsModel.aboutUs[0].image)) { image in
                         image
                             .resizable()
-                            .frame(width: .infinity)
                             .scaledToFit()
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                             .shadow(color: .gray, radius: 2, x: 0, y: 2)
                     } placeholder: {
                         ProgressView()
                     }
-                    .frame(width: .infinity, height: 250)
+                    .frame(height: 250)
                     .padding(.vertical, 6)
                 }
                 .frame(maxWidth: .infinity)

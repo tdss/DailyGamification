@@ -10,6 +10,9 @@ import RealmSwift
 
 struct ClaimTaskRow: View {
     @ObservedRealmObject var checkboxLog: CheckboxLog
+    @Binding var confettiCounter: Int
+    
+    @State var isClaimButtonTapped: Bool = false
     
     var body: some View {
         VStack {
@@ -59,6 +62,7 @@ struct ClaimTaskRow: View {
     
     
     private func updateCheckboxLog() {
+        confettiCounter += 1
         if let newItem = checkboxLog.thaw(),
            let realm = newItem.realm
         {
@@ -76,6 +80,6 @@ struct ClaimTaskRow: View {
 
 struct ClaimTaskRow_Previews: PreviewProvider {
     static var previews: some View {
-        ClaimTaskRow(checkboxLog: GamificationDiary.getSampleToday().checkboxLogs[0])
+        ClaimTaskRow(checkboxLog: GamificationDiary.getSampleToday().checkboxLogs[0], confettiCounter: .constant(0))
     }
 }

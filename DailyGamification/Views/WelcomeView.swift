@@ -49,10 +49,14 @@ struct WelcomeView: View {
                     .padding()
                     .foregroundColor(.white)
                     .background(Color("Primary"))
-                    .cornerRadius(40)
+                    .cornerRadius(5)
             }
             .padding(.horizontal)
             .padding(.bottom, 20)
+        }
+        .task {
+             NotificationManager.instance.requestAuthorization()
+            
         }
     }
 }
