@@ -24,7 +24,7 @@ class NotificationManager {
                     identifier: "morning-motivational-notification",
                     title: "Morning motivational notification",
                     subtitle: "Check your goals for today!",
-                    hour: 20,
+                    hour: 10,
                     minute: 36
                 )
                 

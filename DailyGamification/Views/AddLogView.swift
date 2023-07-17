@@ -27,13 +27,13 @@ struct AddLogView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 20) {
-                Text("New \(achievementType == .numeric ? "Single Daily Goal" : "Daily Counter")")
+                Text("New \(achievementType != .numeric ? "Single Daily Goal" : "Daily Counter")")
                     .font(.largeTitle)
                     .multilineTextAlignment(.center)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                 
-                Text("\(achievementType == .numeric ? "Use it for one time events like 'Meditated in the moring', 'Woke up 6am' or 'Wrote something new'." : "Use it for things you want to repeat multiple times like 'Push-ups', 'Book chapters read' or 'Biking distance (km)'.")")
+                Text("\(achievementType != .numeric ? "Use it for one time events like 'Meditated in the moring', 'Woke up 6am' or 'Wrote something new'." : "Use it for things you want to repeat multiple times like 'Push-ups', 'Book chapters read' or 'Biking distance (km)'.")")
                     .multilineTextAlignment(.center)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
@@ -43,7 +43,7 @@ struct AddLogView: View {
                         .font(.headline)
                         .foregroundColor(.white)
                     
-                    TextField("", text: $name, prompt: Text("E.g., Push-ups").foregroundColor(Color("Primary")))
+                    TextField("", text: $name, prompt: Text("\(achievementType == .numeric ? "E.g. 'push-ups' or 'miles run'" : "E.g. 'Woke up early'")").foregroundColor(Color("Primary")))
                         .padding()
                         .background(Color.white.opacity(0.5))
                         .cornerRadius(10)
