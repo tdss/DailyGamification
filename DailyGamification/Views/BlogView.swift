@@ -54,7 +54,7 @@ struct BlogView: View {
                 .padding(.bottom, 10)
                 
                 
-            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean auctor ex libero, eu pulvinar massa.")
+            Text("Learn how to use gamification for personal life improvement!")
                 .font(.body)
                 .foregroundColor(colorScheme == .dark ? Color.white : Color.gray)
                 .padding(.bottom, 10)

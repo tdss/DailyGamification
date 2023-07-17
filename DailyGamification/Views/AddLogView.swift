@@ -27,13 +27,19 @@ struct AddLogView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 20) {
-                Text("New \(achievementType == .numeric ? "Numeric" : "") Achievement")
+                Text("New \(achievementType == .numeric ? "Single Daily Goal" : "Daily Counter")")
                     .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                
+                Text("\(achievementType == .numeric ? "Use it for one time events like 'Meditated in the moring', 'Woke up 6am' or 'Wrote something new'." : "Use it for things you want to repeat multiple times like 'Push-ups', 'Book chapters read' or 'Biking distance (km)'.")")
+                    .multilineTextAlignment(.center)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                 
                 VStack {
-                    Text("Achievement Name")
+                    Text("Goal Name")
                         .font(.headline)
                         .foregroundColor(.white)
                     
@@ -44,11 +50,11 @@ struct AddLogView: View {
                 }
                 
                 VStack {
-                    Text("\(achievementType == .numeric ? "Points per Item" : "Difficulty Level"): \(Int(multiplier))")
+                    Text("\(achievementType == .numeric ? "Points per item" : "Task Difficulty Level"): \(Int(multiplier))")
                         .font(.headline)
                         .foregroundColor(.white)
                     Spacer().frame(height: 5)
-                    Text("How much points \(achievementType == .numeric ? "per item" : "for completion")? (1-easy, 10-hard):")
+                    Text("How many points\(achievementType == .numeric ? " per item" : "")? (1-easy, 10-hard):")
                         .font(.callout)
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
@@ -67,7 +73,7 @@ struct AddLogView: View {
                         dismiss()
                     }
                 }) {
-                    Text("SAVE")
+                    Text("CREATE")
                         .frame(maxWidth: .infinity)
                         .font(.title)
                         .fontWeight(.bold)
