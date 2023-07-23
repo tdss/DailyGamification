@@ -10,6 +10,7 @@ import RealmSwift
 import Charts
 
 struct DashBoardView: View {
+    @Environment(\.colorScheme) var colorScheme
     @State var showingBottomSheet: Bool = false
     @State var isAddButtonAnimating: Bool = false
     
@@ -74,9 +75,9 @@ struct DashBoardView: View {
             }
         }
         .frame(width: 220, height: 50)
-        .background(.white)
+        .background(colorScheme == .dark ? .black : .white)
         .cornerRadius(20)
-        .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
+        .shadow(color: colorScheme == .dark ? Color("Primary").opacity(0.8) : .black.opacity(0.2), radius: 10, x: -1,  y: 12)
         
     }
     

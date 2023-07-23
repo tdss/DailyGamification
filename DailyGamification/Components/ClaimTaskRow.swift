@@ -9,6 +9,7 @@ import SwiftUI
 import RealmSwift
 
 struct ClaimTaskRow: View {
+    @Environment(\.colorScheme) var colorScheme 
     @ObservedRealmObject var checkboxLog: CheckboxLog
     @Binding var confettiCounter: Int
     
@@ -54,10 +55,11 @@ struct ClaimTaskRow: View {
             }
             .padding()
         }
-        .background(.white)
+        .background(colorScheme == .dark ? .black : .white)
         .cornerRadius(10)
-        .shadow(color: .black.opacity(0.2), radius: 10, y: 10)
+        .shadow(color: colorScheme == .dark ? Color("Primary").opacity(0.8) : .black.opacity(0.2), radius: 10, x: -1,  y: 12)
         .padding(.horizontal)
+
     }
     
     

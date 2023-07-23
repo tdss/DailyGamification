@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct RoundedButton: View {
+    @Environment(\.colorScheme) var colorScheme
     let systemImageName: String
     let buttonAction: () -> Void
     var body: some View {
         Button(action: buttonAction) {
             Image(systemName: systemImageName)
                 .font(.callout)
-                .foregroundColor(.gray)
+                .foregroundColor(colorScheme == .dark ? .white : .black)
                 .frame(width: 50, height: 50)
-                .background(.white)
+                .background(colorScheme == .dark ? .black : .white)
                 .cornerRadius(25)
-                .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
+                .shadow(color: colorScheme == .dark ? Color("Primary").opacity(0.8) : .black.opacity(0.2), radius: 10, x: -1,  y: 12)
         }
         .buttonStyle(PlainButtonStyle())
     }

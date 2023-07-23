@@ -22,6 +22,7 @@ struct SplashView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300, height: 300)
+                    .cornerRadius(150)
                     .scaleEffect(size)
                     .opacity(opacity)
                     .onAppear {

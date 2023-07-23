@@ -33,7 +33,7 @@ struct AddLogView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                 
-                Text("\(achievementType != .numeric ? "Use it for one time events like 'Meditated in the moring', 'Woke up 6am' or 'Wrote something new'." : "Use it for things you want to repeat multiple times like 'Push-ups', 'Book chapters read' or 'Biking distance (km)'.")")
+                Text("\(achievementType != .numeric ? "Use it for one-time events like 'Meditated in the morning, 'Woke up at 6 am' or 'Wrote something new'." : "Use it for things you want to repeat multiple times like 'Push-ups', 'Book chapters read' or 'Biking distance (km)'.")")
                     .multilineTextAlignment(.center)
                     .fontWeight(.bold)
                     .foregroundColor(.white)

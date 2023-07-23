@@ -44,7 +44,7 @@ struct DailyLogView: View {
                 .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                 .padding(.bottom, 10)
             
-            Text("Todey is: \(shortDate(date: dailyLog.date))")
+            Text("Today is: \(shortDate(date: dailyLog.date))")
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .font(.footnote)
                 .foregroundColor(colorScheme == .dark ? Color.white : Color.gray)
@@ -53,7 +53,7 @@ struct DailyLogView: View {
         .background(  colorScheme == .dark ?
             .black : .white
         )
-        .shadow(color: .gray.opacity(0.2), radius: 5, x: 0, y: 2)
+        .shadow(color: colorScheme == .dark ? Color("Primary").opacity(0.8) : .gray.opacity(0.2), radius: 10,  y: 5)
     }
     
     var logSelection: some View {
@@ -61,13 +61,14 @@ struct DailyLogView: View {
             Text("How are you today?")
                 .font(.title2)
                 .fontWeight(.semibold)
-                .foregroundColor(.black)
+                .foregroundColor(colorScheme == .dark ? Color.white : Color.gray)
                 .padding(.bottom, 10)
             
             TextField("", text: $dailyLog.textLog, prompt: Text("Your log").foregroundColor(.gray))
-                .background(.white)
-                .foregroundColor(.black)
+                .foregroundColor(colorScheme == .dark ? .white : .black)
                 .textFieldStyle(.roundedBorder)
+                .border(colorScheme == .dark ? Color("Primary") : .gray.opacity(0.4), width: 3)
+                .background(colorScheme == .dark ? .black : .white)
                 .cornerRadius(2)
             Spacer()
                 .frame(height: 20)
@@ -82,7 +83,7 @@ struct DailyLogView: View {
             )
             .pickerStyle(.segmented)
         }
-        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white))
+        .background(RoundedRectangle(cornerRadius: 10).fill(colorScheme == .dark ? Color.black : Color.white))
         .padding([.horizontal, .top])
     }
     

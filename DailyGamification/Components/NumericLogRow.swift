@@ -9,6 +9,7 @@ import SwiftUI
 import RealmSwift
 
 struct NumericLogRow: View {
+    @Environment(\.colorScheme) var colorScheme
     @ObservedRealmObject var numericLog: NumericLog
     
     @State private var current = 0
@@ -35,6 +36,7 @@ struct NumericLogRow: View {
                     Text("\(numericLog.name) (x\(numericLog.multiplier))")
                         .font(.title2)
                         .fontWeight(.semibold)
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
                 }
                 Spacer()
                 Button(action: updateNumericLog) {
@@ -42,18 +44,19 @@ struct NumericLogRow: View {
                         .frame(width: 70, height: 40)
                         .font(.callout)
                         .fontWeight(.bold)
-                        .background(.white)
+                        .background(colorScheme == .dark ? .black : .white)
                         .cornerRadius(10)
-                        .foregroundColor(.gray)
-                        .shadow(radius: 5, y: 5)
+                        .foregroundColor(colorScheme == .dark ? .white : .gray)
+                        .shadow(color: colorScheme == .dark ? Color("Primary").opacity(0.8) : .black.opacity(0.2), radius: 10,  y: 5)
                 }
             }
             .padding()
         }
-        .background(.white)
+        .background(colorScheme == .dark ? .black : .white)
         .cornerRadius(10)
-        .shadow(color: .black.opacity(0.2), radius: 10, y: 10)
+        .shadow(color: colorScheme == .dark ? Color("Primary").opacity(0.8) : .black.opacity(0.2), radius: 10, x: -1,  y: 12)
         .padding(.horizontal)
+
     }
     
     private func updateNumericLog() {

@@ -10,6 +10,7 @@ import RealmSwift
 
 
 struct DashboardItemRow: View {
+    @Environment(\.colorScheme) var colorScheme
     @ObservedRealmObject var dailyLog: DailyLogItem
     
     var body: some View {
@@ -18,10 +19,10 @@ struct DashboardItemRow: View {
                 HStack(alignment: .center) {
                     HStack(alignment: .center) {
                         Image(systemName: "calendar")
-                            .foregroundColor(.black)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                         Text("\(shortDate(date: dailyLog.date))")
                             .font(.headline)
-                            .foregroundColor(.black)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                     }
                     Spacer()
                     HStack(alignment: .center) {
@@ -38,22 +39,22 @@ struct DashboardItemRow: View {
                 HStack {
                     HStack(alignment: .center) {
                         Image(systemName: "text.bubble")
-                            .foregroundColor(.black)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                         Text("\(dailyLog.emoji) \(dailyLog.textLog.isEmpty ? "Your Log" : dailyLog.textLog)")
                             .font(.subheadline)
-                            .foregroundColor(.black)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                     }
                     Spacer()
                     Image(systemName: "arrow.forward")
-                        .foregroundColor(.gray)
+                        .foregroundColor(colorScheme == .dark ? .white : .gray)
                 }
             }
             Spacer()
         }
         .padding()
-        .background(.white)
+        .background(colorScheme == .dark ? .black : .white)
         .cornerRadius(10)
-        .shadow(color: .black.opacity(0.2), radius: 10, y: 10)
+        .shadow(color: colorScheme == .dark ? Color("Primary").opacity(0.8) : .black.opacity(0.2), radius: 10, x: -1,  y: 12)
     }
 }
 
